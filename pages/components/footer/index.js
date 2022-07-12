@@ -2,6 +2,16 @@ import Image from 'next/image';
 
 import styles from './footer.module.css';
 
+const data = [
+    { name: 'twitter', link: 'https://twitter.com/EnigmaOffline' },
+    { name: 'discord', link: 'https://discord.com/users/155275561256747008' },
+    { name: 'instagram', link: 'https://www.instagram.com/lochungtin/' },
+    { name: 'github', link: 'https://github.com/lochungtin' },
+    { name: 'npm', link: 'https://www.npmjs.com/~lochungtin' },
+    { name: 'linkedin', link: 'https://www.linkedin.com/in/timothy-lo-chung-tin/' },
+    { name: 'gmail', link: 'mailto: lochungtin@gmail.com' },
+]
+
 export default function Footer() {
     return (
         <footer className={styles.footer}>
@@ -9,27 +19,9 @@ export default function Footer() {
                 <Image src='/logo/logo_full.svg' width={200} height={50} alt='logo' />
             </div>
             <div className={styles.footerIconbar}>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/twitter.svg' width={25} height={25} alt='twitter' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/discord.svg' width={25} height={25} alt='discord' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/instagram.svg' width={25} height={25} alt='insta' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/github.svg' width={25} height={25} alt='github' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/npm.svg' width={25} height={25} alt='npm' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/linkedin.svg' width={25} height={25} alt='linkedin' />
-                </a>
-                <a className={styles.footerBtn}>
-                    <Image src='/icons/gmail.svg' width={25} height={25} alt='gmail' />
-                </a>
+                {data.map(values => <a className={styles.footerBtn} key={values.name} href={values.link}>
+                    <Image src={`/icons/${values.name}.svg`} width={25} height={25} alt={values.name} />
+                </a>)}
             </div>
             <p>Made with 💙 & ☕ by Timothy Lo</p>
             <p className={styles.footerARRtext}>Copyright © 2022 Lo Chung Tin. All Rights Reserved.</p>

@@ -1,0 +1,28 @@
+.footer {
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.footerLogoContainer {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.footerIconbar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 300px;
+}
+
+.footerARRtext {
+    color: #aaa;
+    font-size: 13px;
+}

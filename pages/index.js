@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Footer from './components/footer'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+
+import Footer from './components/footer';
+import Header from './components/header';
 
 export default function Home() {
 	return (
@@ -10,11 +12,11 @@ export default function Home() {
 				<link rel="icon" href='/logo/favicon.ico' />
 			</Head>
 
+			<Header />
 			<main className={styles.main}>
 
 			</main>
-
 			<Footer />
 		</div>
-	)
+	);
 }

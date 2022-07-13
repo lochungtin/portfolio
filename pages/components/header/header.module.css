@@ -1,0 +1,22 @@
+.header {
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.headerLinkContainer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.headerLink {
+    margin-left: 30px;
+    margin-right: 30px;
+}

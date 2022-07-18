@@ -16,7 +16,7 @@ export default function Codebox() {
             <pre className={styles.codeText}>
                 <code>const</code>{` person = {\n    `}
                 <span>name</span>{`: "Timothy Lo",\n    `}
-                <span>age</span>{`: ${age},\n    `}
+                <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}
                 <span>location</span>{`: "London",\n    `}
                 <span>abilities</span>{`: [\n\t`}
                 {`"Machine Learning"\n\t`}

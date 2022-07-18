@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className={styles.footerIconbar}>
                 {data.map(values => <a className={styles.footerBtn} key={values.name} href={values.link}>
-                    <Image src={`/icons/${values.name}.svg`} width={25} height={25} alt={values.name} />
+                    <Image src={`/icons/socials/${values.name}.svg`} width={25} height={25} alt={values.name} />
                 </a>)}
             </div>
             <p>Made with 🧡 & ☕ by Timothy Lo</p>

@@ -7,6 +7,7 @@ export default function About() {
     return (
         <section id='about'>
             <Codebox />
+            <p></p>
         </section>
     );
 }

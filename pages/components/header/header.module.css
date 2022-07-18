@@ -1,13 +1,15 @@
+.header {
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
 @media only screen and (max-width: 768px) {
     .header {
-        align-items: center;
-        border-bottom: 1px solid #eaeaea;
-        display: flex;
-        flex: 1;
         flex-direction: column;
-        justify-content: center;
-        padding: 2rem 0;
-        width: auto;
     }
 
     .headerLink {
@@ -36,14 +38,6 @@
 }
 
 @media only screen and (min-width: 769px) {
-    .header {
-        align-items: center;
-        border-bottom: 1px solid #eaeaea;
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        padding: 2rem 0;
-    }
 
     .headerLink {
         margin-left: 30px;

@@ -20,8 +20,8 @@ export default function About() {
                 <div className={styles.aboutCell}>
                     <p className={styles.title}>AI and ML</p>
                     <p>I have taken a handful of online courses about both supervised and reinforcement learning and have taught myself to use popular ML frameworks such as <code>TensorFlow</code> and <code>PyTorch</code>.</p>
-                    <p>My undergrad final year project is comparing characteristics of <code>genetics algorithms</code> and classic <code>temporal reinforcement learning</code> with the Pacman environment.</p>
-                    <p>I am now currently working on image recognition and <code>segmentation</code> tasks.</p>
+                    <p>My undergrad final year project is to compare characteristics of <code>genetics algorithms</code> and classic <code>temporal reinforcement learning</code> using the Pacman environment.</p>
+                    <p>I am now currently working on image recognition and <code>segmentation</code> tasks on ultrasonic images.</p>
                 </div>
                 <div className={styles.aboutCell}>
                     <p className={styles.title}>Software Dev</p>

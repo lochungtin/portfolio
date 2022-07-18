@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './about.module.css';
 
 export default function Codebox() {
-    const [age, setAge] = useState(() => {
-        return `${((new Date().getTime() / 100000) - 10083744) / 315360}`.substring(0, 11);
-    });
+    const [age, setAge] = useState('calculating');
 
     useEffect(() => {
         setInterval(() => {

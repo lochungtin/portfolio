@@ -48,5 +48,6 @@
     .headerLink {
         margin-left: 30px;
         margin-right: 30px;
+        width: 75px;
     }
 }

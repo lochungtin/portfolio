@@ -1,5 +1,15 @@
-.codeText {
-    font-size: 1rem;
+.title {
+    color: #f7821b;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    line-height: 0px;
+}
+
+.subtitle {
+    color: #555555;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .codeBox {
@@ -12,9 +22,17 @@
     padding: 20px 0 20px 0;
 }
 
+.codeText {
+    font-size: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     .codeBox {
         width: 90vw;
+    }
+
+    .titleText {
+        padding-left: 1rem;
     }
 }
 
@@ -22,5 +40,15 @@
     .codeBox {
         padding: 20px 50px;
     }
-}
 
+    .frontRow {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .titleText {        
+        margin-right: 4rem;
+    }
+}

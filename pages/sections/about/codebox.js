@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './about.module.css';
 
 export default function Codebox() {
-    const [age, setAge] = useState('calculating');
+    const [age, setAge] = useState(`"Loading ..."`);
 
     useEffect(() => {
         setInterval(() => {

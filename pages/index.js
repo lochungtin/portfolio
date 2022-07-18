@@ -10,6 +10,7 @@ export default function Home() {
 			<Head>
 				<title>Timothy Lo</title>
 				<link rel="icon" href='/logo/favicon.ico' />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 			</Head>
 
 			<Header />

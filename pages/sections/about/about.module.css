@@ -1,8 +1,11 @@
+.welcome {
+    font-size: 1.25rem;
+}
+
 .title {
     color: #f7821b;
     font-size: 2.5rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
     line-height: 0px;
 }
 
@@ -26,29 +29,52 @@
     font-size: 1rem;
 }
 
+.aboutCell {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
+    .titleText {
+        padding-left: 1rem;
+    }
+
     .codeBox {
         width: 90vw;
     }
 
-    .titleText {
-        padding-left: 1rem;
+    .aboutCell {
+        margin-top: 2rem;
+        width: 90vw;
     }
 }
 
 @media only screen and (min-width: 769px) {
-    .codeBox {
-        padding: 20px 50px;
-    }
-
-    .frontRow {
+    .row {
         align-items: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-top: 4rem;
     }
 
-    .titleText {        
+    .titleText {
         margin-right: 4rem;
+    }
+
+    .codeBox {
+        padding: 20px 50px;
+    }
+
+    .aboutRow {
+        height: 21rem;
+    }
+
+    .aboutCell {
+        height: inherit;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 25rem;
     }
 }

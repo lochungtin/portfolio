@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

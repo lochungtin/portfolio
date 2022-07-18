@@ -4,15 +4,37 @@
         border-bottom: 1px solid #eaeaea;
         display: flex;
         flex: 1;
+        flex-direction: column;
         justify-content: center;
         padding: 2rem 0;
+        width: auto;
     }
 
     .headerLink {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-top: 40px;
+        transition: 0.2s;
+    }
+
+    .hidden {
+        margin: 0px;
+        height: 0;
+    }
+
+    .logo {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        width: inherit;
+    }
+
+    .menu {
+        left: 40px;
+        position: absolute;
+        top: 45px;
     }
 }
+
 @media only screen and (min-width: 601px) {
     .header {
         align-items: center;
@@ -22,9 +44,9 @@
         justify-content: center;
         padding: 2rem 0;
     }
-    
+
     .headerLink {
         margin-left: 30px;
         margin-right: 30px;
-    }   
+    }
 }

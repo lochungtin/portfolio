@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './header.module.css';
-import useMediaQuery from '../utils/media';
+import useMediaQuery from '../../utils/media';
 import { useState } from 'react';
 
 export default function Header() {

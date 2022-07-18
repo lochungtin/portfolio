@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 
-const mobile = 600;
+const mobile = 768;
 
 export default function useMediaQuery(width = mobile) {
     const [targetReached, setTargetReached] = useState(false);

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Codebox from './codebox';
 
 import styles from './about.module.css';

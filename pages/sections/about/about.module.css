@@ -13,6 +13,7 @@
     color: #555555;
     font-size: 1.5rem;
     line-height: 1.5rem;
+    text-align: start;
 }
 
 .codeBox {
@@ -28,7 +29,7 @@
 }
 
 .aboutCell {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .mainSkillCell {
@@ -41,6 +42,10 @@
 
 .skillText {
     text-align: center;
+}
+
+.seeMoreRoot {
+    margin-top: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -91,7 +96,7 @@
     }
 
     .aboutRow {
-        height: 21rem;
+        height: 25rem;
         margin-bottom: 4rem;
     }
 

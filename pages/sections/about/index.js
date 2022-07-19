@@ -33,7 +33,7 @@ export default function About() {
                         <div className={styles.aboutCell}>
                             <p className={styles.title}>Software Dev</p>
                             <p>I have been developing with <code>React JS</code> and <code>React Native</code> for 4 years. I have developed a few mobile apps, some of which have been released on Github as downloadable APKs.</p>
-                            <p>After gaining a good grip on React and React-Native, I am now branching out to other web and mobile frameworks such as <code>NextJS</code> and <code>Flutter</code>.</p>
+                            <p>After gaining a good grip on React and React Native, I am now branching out to other web and mobile frameworks such as <code>NextJS</code> and <code>Flutter</code>.</p>
                         </div>
                     </Card>
                 </div>
@@ -45,7 +45,7 @@ export default function About() {
                         <div className={styles.mainSkillCell}>
                             <Image src='/icons/tech/react.svg' width={60} height={60} alt='react' />
                             <p className={styles.subtitle}>React Family</p>
-                            <p className={styles.skillText}><code>React JS, React Native, Next JS, Redux</code></p>
+                            <p className={styles.skillText}><code>ReactJS, React Native, NextJS, Redux</code></p>
                         </div>
                     </Card>
                 </div>
@@ -54,7 +54,7 @@ export default function About() {
                         <div className={styles.mainSkillCell}>
                             <Image src='/icons/tech/py.svg' width={60} height={60} alt='python' />
                             <p className={styles.subtitle}>Python</p>
-                            <p className={styles.skillText}><code>NumPy, TensorFlow, TKinter</code></p>
+                            <p className={styles.skillText}><code>NumPy, PyTorch, TensorFlow, TKinter</code></p>
                         </div>
                     </Card>
                 </div>
@@ -63,12 +63,14 @@ export default function About() {
                         <div className={styles.mainSkillCell}>
                             <Image src='/icons/tech/cpp.svg' width={60} height={60} alt='cpp' />
                             <p className={styles.subtitle}>C++</p>
-                            <p className={styles.skillText}><code>Expressif, Arduino, OpenGl, OpenCV</code></p>
+                            <p className={styles.skillText}><code>Arduino, Expressif, OpenGl, OpenCV</code></p>
                         </div>
                     </Card>
                 </div>
             </div>
-            <SeeMore onClick={console.log} />
+            <div className={styles.seeMoreRoot}>
+                <SeeMore onClick={console.log} />
+            </div>
         </section>
     );
 }

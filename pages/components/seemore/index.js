@@ -17,7 +17,7 @@ export default function SeeMore({ onClick }) {
                 {expanded ? 'See Less' : 'See More'}
             </p>
             <Image
-                src={`/icons/${expanded ? 'down' : 'up'}.svg`}
+                src={`/icons/chevron-${expanded ? 'up' : 'down'}.svg`}
                 width={20} height={20} alt='icon'
             />
         </button>

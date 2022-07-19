@@ -64,6 +64,11 @@
     .aboutCell{
         width: 90vw;
     }
+    
+    .skillTitle {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
 
     .mainSkillCellRoot {
         margin-top: 2rem;

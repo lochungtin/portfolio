@@ -77,7 +77,7 @@ export default function About() {
                     </Card>
                 </div>
             </div>
-            <p className={styles.title}>My Skills</p>
+            <p className={`${styles.title} ${styles.skillTitle}`}>My Skills</p>
             <div className={`${styles.row} ${''}`}>
                 {mainSkills.map((data, index) => <div className={styles.mainSkillCellRoot} key={index}>
                     <Card>

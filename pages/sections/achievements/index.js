@@ -47,7 +47,7 @@ export default function Achievements() {
                     <p className={styles.shortDescText}>{data.shortdesc}</p>
                     <p>{data.longdesc}</p>
                     <div className={styles.readmoreContainer}>
-                        {data.href ? <ReadMore href={data.href} /> : null}
+                        {data.href ? <ReadMore href={data.href || ''} /> : null}
                     </div>
                 </div>)}
         </section>

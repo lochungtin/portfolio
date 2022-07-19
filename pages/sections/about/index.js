@@ -79,7 +79,7 @@ export default function About() {
             </div>
             <p className={styles.title}>My Skills</p>
             <div className={`${styles.row} ${''}`}>
-                {mainSkills.map(data => <div className={styles.mainSkillCellRoot} key={data.name}>
+                {mainSkills.map((data, index) => <div className={styles.mainSkillCellRoot} key={index}>
                     <Card>
                         <div className={styles.mainSkillCell}>
                             <Image src={`/icons/tech/${data.icon}.svg`} width={60} height={60} alt='react' />
@@ -91,10 +91,10 @@ export default function About() {
             </div>
             {moreSkills ? <div className={`${styles.row} ${styles.skillRow}`}>
                 <div>
-                    {otherSkills[0].map(data => <SkillDisplay data={data} key={data.name} />)}
+                    {otherSkills[0].map((data, index) => <SkillDisplay data={data} key={index} />)}
                 </div>
                 <div>
-                    {otherSkills[1].map(data => <SkillDisplay data={data} key={data.name} />)}
+                    {otherSkills[1].map((data, index) => <SkillDisplay data={data} key={index} />)}
                 </div>
             </div> : null}
             <div className={styles.seeMoreRoot}>

@@ -6,32 +6,16 @@
     margin-top: 4rem;
 }
 
-.achievementItemBox {
-    border-bottom: 1px solid #eaeaea;
+.lastBox {
+    border: none;
     margin-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-.lastBox {
-    border: none;
-    padding-bottom: 0;
-}
-
-.achievementTitleText {
-    color: #f7821b;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: start;
-}
-
 .timeText {
     color: #555555;
-}
-
-.shortDescText {
-    font-weight: bold;
 }
 
 .readmoreContainer {
@@ -39,23 +23,14 @@
     margin-top: 1rem;
 }
 
-
 @media only screen and (max-width: 768px) {
-    .achievementItemBox {
+    .lastBox {
         width: 90vw;
     }
 }
 
 @media only screen and (min-width: 769px) {
-    .achievementItemBox {
+    .lastBox {
         width: 40rem;
-    }
-
-    .horizontalP {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 36rem;
     }
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import BinarySelector from '../../components/binaryselector';
 
+import commonStyles from '../../../styles/common.module.css';
 import styles from './education.module.css';
 
 const formal = [
@@ -63,21 +64,20 @@ export default function Education() {
                 val0='Online Courses' val1='Formal Education'
                 onClick={() => setSelection((selection + 1) % 2)}
             />
-            {(selection ? formal : online).map((data, index) => {
-                return <div className={styles.educationitemBox} key={index}>
-                    <div className={styles.horizontalP}>
-                        <p className={styles.educationTitleContainer}>
-                            <span className={styles.educationTitle}>{data.title}</span>
+            {(selection ? formal : online).map((data, index) =>
+                <div className={commonStyles.itemDetailBox} key={index}>
+                    <div className={commonStyles.horizontalParagraphs}>
+                        <p className={styles.titleContainer}>
+                            <span className={commonStyles.itemDetailTitle}>{data.title}</span>
                             {` @ ${data.location}`}
                         </p>
                         <p className={styles.eductationTimeText}><span>({data.time})</span></p>
                     </div>
                     <p className={styles.educationScoreText}>
                         {'Qualification: '}
-                        <span className={styles.educationScoreValText}>{data.score}</span>
+                        <b>{data.score}</b>
                     </p>
-                </div>
-            })}
+                </div>)}
         </section>
     );
 }

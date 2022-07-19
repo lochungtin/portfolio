@@ -6,52 +6,15 @@
     margin-top: 4rem;
 }
 
-.educationitemBox {
-    border-bottom: 1px solid #eaeaea;
-    margin-top: 4rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.educationTitleContainer {
+.titleContainer {
     text-align: start;
-}
-
-.educationTitle {
-    color: #f7821b;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 .eductationTimeText {
     line-height: 0.5rem;
 }
 
-.educationScoreValText {
-    color: #000000;
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 768px) {
-    .educationitemBox {
-        width: 90vw;
-    }
-}
-
 @media only screen and (min-width: 769px) {
-    .educationitemBox {
-        width: 40rem;
-    }
-
-    .horizontalP {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 36rem;
-    }
-
     .educationTitleContainer {
         width: 27rem;
     }

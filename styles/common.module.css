@@ -13,3 +13,38 @@
     color: #ffffff;
     min-width: 5rem;
 }
+
+.itemDetailBox {
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.itemDetailTitle {
+    color: #f7821b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+    .itemDetailBox {
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .itemDetailBox {
+        width: 40rem;
+    }
+
+    .horizontalParagraphs {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 36rem;
+    }
+}

@@ -1,6 +1,7 @@
 import ReadMore from '../../components/readmore';
 import useMediaQuery from '../../utils/media';
 
+import commonStyles from '../../../styles/common.module.css';
 import styles from './achievements.module.css';
 
 const achievements = [
@@ -39,12 +40,12 @@ export default function Achievements() {
         <section id='achievements'>
             <p className={styles.title}>{isMobile ? '' : 'Other '}Achievements</p>
             {achievements.map((data, index) =>
-                <div className={`${styles.achievementItemBox} ${len === index ? styles.lastBox : ''}`} key={index}>
-                    <div className={styles.horizontalP}>
-                        <p className={styles.achievementTitleText}>{data.title}</p>
+                <div className={len === index ? styles.lastBox : commonStyles.itemDetailBox} key={index}>
+                    <div className={commonStyles.horizontalParagraphs}>
+                        <p className={commonStyles.itemDetailTitle}>{data.title}</p>
                         <p className={styles.timeText}>({data.time})</p>
                     </div>
-                    <p className={styles.shortDescText}>{data.shortdesc}</p>
+                    <b>{data.shortdesc}</b>
                     <p>{data.longdesc}</p>
                     <div className={styles.readmoreContainer}>
                         {data.href ? <ReadMore href={data.href} /> : null}

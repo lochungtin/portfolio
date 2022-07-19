@@ -14,8 +14,13 @@
     padding-right: 2rem;
 }
 
+.educationTitleContainer {
+    text-align: start;
+}
+
 .educationTitle {
     color: #f7821b;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -47,8 +52,7 @@
         width: 36rem;
     }
 
-    .horizontalEducationTitle {
-        text-align: start;
+    .educationTitleContainer {
         width: 27rem;
     }
 

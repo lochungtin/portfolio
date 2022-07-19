@@ -66,7 +66,7 @@ export default function Education() {
             {(selection ? formal : online).map((data, index) => {
                 return <div className={styles.educationitemBox} key={index}>
                     <div className={styles.horizontalP}>
-                        <p className={styles.horizontalEducationTitle}>
+                        <p className={styles.educationTitleContainer}>
                             <span className={styles.educationTitle}>{data.title}</span>
                             {` @ ${data.location}`}
                         </p>

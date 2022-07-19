@@ -76,6 +76,10 @@
     .skillText {
         width: 70vw;
     }
+
+    .skillRow {
+        margin-top: 1rem;
+    }
 }
 
 @media only screen and (min-width: 769px) {

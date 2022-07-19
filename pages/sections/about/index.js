@@ -7,6 +7,7 @@ import Codebox from './codebox';
 
 import styles from './about.module.css';
 import SkillDisplay from '../../components/skilldisplay';
+import useMediaQuery from '../../utils/media';
 
 const mainSkills = [
     { icon: 'reactjs', name: 'React Family', subtext: 'ReactJS, React Native, NextJS, Redux' },
@@ -14,33 +15,36 @@ const mainSkills = [
     { icon: 'cpp', name: 'C++', subtext: 'Arduino, Expressif, OpenGl, OpenCV' },
 ];
 
-const otherSkills = [
-    [
-        { name: 'JavaScript', rating: 5 },
-        { name: 'Python', rating: 5 },
-        { name: 'HTML5', rating: 5 },
-        { name: 'ReactJS', rating: 4 },
-        { name: 'MongoDB', rating: 4 },
-        { name: 'NumPy', rating: 4 },
-        { name: 'TensorFlow', rating: 3 },
-        { name: 'Arduino', rating: 5 },
-        { name: 'RaspberryPI', rating: 4 },
-    ],
-    [
-        { name: 'TypeScript', rating: 5 },
-        { name: 'CPP', rating: 4 },
-        { name: 'SVG', rating: 3 },
-        { name: 'ExpressJS', rating: 4 },
-        { name: 'MySQL', rating: 3 },
-        { name: 'Jupyter', rating: 4 },
-        { name: 'PyTorch', rating: 4 },
-        { name: 'Espressif', rating: 5 },
-        { name: 'Bluetooth', rating: 3 },
-    ]
+const skills = [
+    { name: 'JavaScript', rating: 5 },
+    { name: 'TypeScript', rating: 5 },
+    { name: 'CPP', rating: 4 },
+    { name: 'Python', rating: 5 },
+    { name: 'HTML5', rating: 5 },
+    { name: 'SVG', rating: 3 },
+    { name: 'ReactJS', rating: 4 },
+    { name: 'ExpressJS', rating: 4 },
+    { name: 'MongoDB', rating: 4 },
+    { name: 'MySQL', rating: 3 },
+    { name: 'NumPy', rating: 4 },
+    { name: 'Jupyter', rating: 4 },
+    { name: 'TensorFlow', rating: 3 },
+    { name: 'PyTorch', rating: 4 },
+    { name: 'Arduino', rating: 5 },
+    { name: 'Espressif', rating: 5 },
+    { name: 'RaspberryPI', rating: 4 },
+    { name: 'Bluetooth', rating: 3 },
 ]
 
 export default function About() {
-    const [moreSkills, toggleMoreSkills] = useState(true);
+    const [moreSkills, toggleMoreSkills] = useState(false);
+    const isMobile = useMediaQuery();
+
+    const otherSkills = [[], []];
+    if (!isMobile)
+        skills.forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
+    else
+        otherSkills[0] = skills;
 
     return (
         <section id='about'>
@@ -85,7 +89,7 @@ export default function About() {
                     </Card>
                 </div>)}
             </div>
-            {moreSkills ? <div className={styles.row}>
+            {moreSkills ? <div className={`${styles.row} ${styles.skillRow}`}>
                 <div>
                     {otherSkills[0].map(data => <SkillDisplay data={data} key={data.name} />)}
                 </div>

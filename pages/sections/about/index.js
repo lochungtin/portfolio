@@ -21,7 +21,7 @@ const skills = [
     { name: 'CPP', rating: 4 },
     { name: 'Python', rating: 5 },
     { name: 'HTML5', rating: 5 },
-    { name: 'SVG', rating: 3 },
+    { name: 'D3JS', rating: 3 },
     { name: 'ReactJS', rating: 4 },
     { name: 'ExpressJS', rating: 4 },
     { name: 'MongoDB', rating: 4 },

@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 import Card from '../../components/card';
 import SeeMore from '../../components/seemore';
+import SkillDisplay from '../../components/skilldisplay';
+import useMediaQuery from '../../utils/media';
 import Codebox from './codebox';
 
 import styles from './about.module.css';
-import SkillDisplay from '../../components/skilldisplay';
-import useMediaQuery from '../../utils/media';
 
 const mainSkills = [
     { icon: 'reactjs', name: 'React Family', subtext: 'ReactJS, React Native, NextJS, Redux' },

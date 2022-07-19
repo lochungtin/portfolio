@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <section id='projects'>
             <p className={styles.title}>Projects</p>
-            <ReadMore href='/projects'/>
+            <ReadMore href='/projects' textOverride='All Projects'/>
         </section>
     );
 }

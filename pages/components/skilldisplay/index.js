@@ -2,9 +2,6 @@ import Image from 'next/image';
 import styles from './skilldisplay.module.css';
 
 export default function SkillDisplay({ data }) {
-    if (!data)
-        return <div></div>;
-
     const src = `/icons/tech/${data.name.toLowerCase()}.svg`;
     return (
         <div className={styles.spacer}>

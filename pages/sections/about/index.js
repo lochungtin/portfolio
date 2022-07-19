@@ -93,9 +93,9 @@ export default function About() {
                 <div>
                     {otherSkills[0].map((data, index) => <SkillDisplay data={data} key={index} />)}
                 </div>
-                <div>
+                {!isMobile ? <div>
                     {otherSkills[1].map((data, index) => <SkillDisplay data={data} key={index} />)}
-                </div>
+                </div> : null}
             </div> : null}
             <div className={styles.seeMoreRoot}>
                 <SeeMore onClick={val => toggleMoreSkills(val)} />

@@ -3,6 +3,7 @@ import Codebox from './codebox';
 import styles from './about.module.css';
 import Card from '../../components/card';
 import Image from 'next/image';
+import SeeMore from '../../components/seemore';
 
 export default function About() {
 
@@ -67,6 +68,7 @@ export default function About() {
                     </Card>
                 </div>
             </div>
+            <SeeMore onClick={console.log} />
         </section>
     );
 }

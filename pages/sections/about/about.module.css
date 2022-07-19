@@ -31,6 +31,18 @@
     padding: 1rem;
 }
 
+.mainSkillCell {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.skillText {
+    text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
     .titleText {
         padding-left: 1rem;
@@ -46,6 +58,18 @@
 
     .aboutCell{
         width: 90vw;
+    }
+
+    .mainSkillCellRoot {
+        margin-top: 2rem;
+    }
+
+    .mainSkillCell {
+        width: 90vw;
+    }
+
+    .skillText {
+        width: 70vw;
     }
 }
 
@@ -68,6 +92,7 @@
 
     .aboutRow {
         height: 21rem;
+        margin-bottom: 4rem;
     }
 
     .aboutCellRoot {
@@ -79,5 +104,18 @@
     .aboutCell {
         height: inherit;
         width: 25rem;
+    }
+
+    .mainSkillCellRoot {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .mainSkillCell {
+        width: 15rem;
+    }
+
+    .skillText {
+        width: 10rem;
     }
 }

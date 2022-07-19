@@ -2,6 +2,7 @@ import Codebox from './codebox';
 
 import styles from './about.module.css';
 import Card from '../../components/card';
+import Image from 'next/image';
 
 export default function About() {
 
@@ -37,6 +38,35 @@ export default function About() {
                 </div>
             </div>
             <p className={styles.title}>My Skills</p>
+            <div className={`${styles.row} ${''}`}>
+                <div className={styles.mainSkillCellRoot}>
+                    <Card>
+                        <div className={styles.mainSkillCell}>
+                            <Image src='/icons/tech/react.svg' width={60} height={60} alt='react' />
+                            <p className={styles.subtitle}>React Family</p>
+                            <p className={styles.skillText}><code>React JS, React Native, Next JS, Redux</code></p>
+                        </div>
+                    </Card>
+                </div>
+                <div className={styles.mainSkillCellRoot}>
+                    <Card>
+                        <div className={styles.mainSkillCell}>
+                            <Image src='/icons/tech/py.svg' width={60} height={60} alt='python' />
+                            <p className={styles.subtitle}>Python</p>
+                            <p className={styles.skillText}><code>NumPy, TensorFlow, TKinter</code></p>
+                        </div>
+                    </Card>
+                </div>
+                <div className={styles.mainSkillCellRoot}>
+                    <Card>
+                        <div className={styles.mainSkillCell}>
+                            <Image src='/icons/tech/cpp.svg' width={60} height={60} alt='cpp' />
+                            <p className={styles.subtitle}>C++</p>
+                            <p className={styles.skillText}><code>Expressif, Arduino, OpenGl, OpenCV</code></p>
+                        </div>
+                    </Card>
+                </div>
+            </div>
         </section>
     );
 }

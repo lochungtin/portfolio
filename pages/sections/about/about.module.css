@@ -120,6 +120,10 @@
         width: 25rem;
     }
 
+    .skillTitle {
+        margin-bottom: 0.5rem;
+    }
+
     .mainSkillCellRoot {
         margin-left: 1rem;
         margin-right: 1rem;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import Card from '../../components/card';
+
 import styles from './about.module.css';
 
 export default function Codebox() {
@@ -12,18 +14,20 @@ export default function Codebox() {
     }, []);
 
     return (
-        <div className={styles.codeBox}>
-            <pre className={styles.codeText}>
-                <code>const</code>{` person = {\n    `}
-                <span>name</span>{`: "Timothy Lo",\n    `}
-                <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}
-                <span>location</span>{`: "London",\n    `}
-                <span>abilities</span>{`: [\n\t`}
-                {`"Machine Learning"\n\t`}
-                {`"Full Stack Dev"\n\t`}
-                {`"Mobile Dev",\n    `}
-                {`],\n};`}
-            </pre>
-        </div>
+        <Card>
+            <div className={styles.codeBox}>
+                <pre className={styles.codeText}>
+                    <code>const</code>{` person = {\n    `}
+                    <span>name</span>{`: "Timothy Lo",\n    `}
+                    <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}
+                    <span>location</span>{`: "London",\n    `}
+                    <span>abilities</span>{`: [\n\t`}
+                    {`"Machine Learning"\n\t`}
+                    {`"Full Stack Dev"\n\t`}
+                    {`"Mobile Dev",\n    `}
+                    {`],\n};`}
+                </pre>
+            </div>
+        </Card>
     );
 }

@@ -1,11 +1,46 @@
+import { useState } from 'react';
+import Image from 'next/image';
+
+import Card from '../../components/card';
+import SeeMore from '../../components/seemore';
 import Codebox from './codebox';
 
 import styles from './about.module.css';
-import Card from '../../components/card';
-import Image from 'next/image';
-import SeeMore from '../../components/seemore';
+import SkillDisplay from '../../components/skilldisplay';
+
+const mainSkills = [
+    { icon: 'reactjs', name: 'React Family', subtext: 'ReactJS, React Native, NextJS, Redux' },
+    { icon: 'python', name: 'Python', subtext: 'NumPy, PyTorch, TensorFlow, TKinter' },
+    { icon: 'cpp', name: 'C++', subtext: 'Arduino, Expressif, OpenGl, OpenCV' },
+];
+
+const otherSkills = [
+    [
+        { name: 'JavaScript', rating: 5 },
+        { name: 'Python', rating: 5 },
+        { name: 'HTML5', rating: 5 },
+        { name: 'ReactJS', rating: 4 },
+        { name: 'MongoDB', rating: 4 },
+        { name: 'NumPy', rating: 4 },
+        { name: 'TensorFlow', rating: 3 },
+        { name: 'Arduino', rating: 5 },
+        { name: 'RaspberryPI', rating: 4 },
+    ],
+    [
+        { name: 'TypeScript', rating: 5 },
+        { name: 'CPP', rating: 4 },
+        { name: 'SVG', rating: 3 },
+        { name: 'ExpressJS', rating: 4 },
+        { name: 'MySQL', rating: 3 },
+        { name: 'Jupyter', rating: 4 },
+        { name: 'PyTorch', rating: 4 },
+        { name: 'Espressif', rating: 5 },
+        { name: 'Bluetooth', rating: 3 },
+    ]
+]
 
 export default function About() {
+    const [moreSkills, toggleMoreSkills] = useState(true);
 
     return (
         <section id='about'>
@@ -40,36 +75,26 @@ export default function About() {
             </div>
             <p className={styles.title}>My Skills</p>
             <div className={`${styles.row} ${''}`}>
-                <div className={styles.mainSkillCellRoot}>
+                {mainSkills.map(data => <div className={styles.mainSkillCellRoot} key={data.name}>
                     <Card>
                         <div className={styles.mainSkillCell}>
-                            <Image src='/icons/tech/react.svg' width={60} height={60} alt='react' />
-                            <p className={styles.subtitle}>React Family</p>
-                            <p className={styles.skillText}><code>ReactJS, React Native, NextJS, Redux</code></p>
+                            <Image src={`/icons/tech/${data.icon}.svg`} width={60} height={60} alt='react' />
+                            <p className={styles.subtitle}>{data.name}</p>
+                            <p className={styles.skillText}><code>{data.subtext}</code></p>
                         </div>
                     </Card>
-                </div>
-                <div className={styles.mainSkillCellRoot}>
-                    <Card>
-                        <div className={styles.mainSkillCell}>
-                            <Image src='/icons/tech/py.svg' width={60} height={60} alt='python' />
-                            <p className={styles.subtitle}>Python</p>
-                            <p className={styles.skillText}><code>NumPy, PyTorch, TensorFlow, TKinter</code></p>
-                        </div>
-                    </Card>
-                </div>
-                <div className={styles.mainSkillCellRoot}>
-                    <Card>
-                        <div className={styles.mainSkillCell}>
-                            <Image src='/icons/tech/cpp.svg' width={60} height={60} alt='cpp' />
-                            <p className={styles.subtitle}>C++</p>
-                            <p className={styles.skillText}><code>Arduino, Expressif, OpenGl, OpenCV</code></p>
-                        </div>
-                    </Card>
-                </div>
+                </div>)}
             </div>
+            {moreSkills ? <div className={styles.row}>
+                <div>
+                    {otherSkills[0].map(data => <SkillDisplay data={data} key={data.name} />)}
+                </div>
+                <div>
+                    {otherSkills[1].map(data => <SkillDisplay data={data} key={data.name} />)}
+                </div>
+            </div> : null}
             <div className={styles.seeMoreRoot}>
-                <SeeMore onClick={console.log} />
+                <SeeMore onClick={val => toggleMoreSkills(val)} />
             </div>
         </section>
     );

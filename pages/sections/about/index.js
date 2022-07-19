@@ -79,22 +79,28 @@ export default function About() {
             </div>
             <p className={`${styles.title} ${styles.skillTitle}`}>My Skills</p>
             <div className={`${styles.row} ${''}`}>
-                {mainSkills.map((data, index) => <div className={styles.mainSkillCellRoot} key={index}>
-                    <Card>
-                        <div className={styles.mainSkillCell}>
-                            <Image src={`/icons/tech/${data.icon}.svg`} width={60} height={60} alt='react' />
-                            <p className={styles.subtitle}>{data.name}</p>
-                            <p className={styles.skillText}><code>{data.subtext}</code></p>
-                        </div>
-                    </Card>
-                </div>)}
+                {mainSkills.map((data, index) =>
+                    <div className={styles.mainSkillCellRoot} key={index}>
+                        <Card>
+                            <div className={styles.mainSkillCell}>
+                                <Image
+                                    src={`/icons/tech/${data.icon}.svg`}
+                                    width={60} height={60} alt='react'
+                                />
+                                <p className={styles.subtitle}>{data.name}</p>
+                                <p className={styles.skillText}><code>{data.subtext}</code></p>
+                            </div>
+                        </Card>
+                    </div>)}
             </div>
             {moreSkills ? <div className={`${styles.row} ${styles.skillRow}`}>
                 <div>
-                    {otherSkills[0].map((data, index) => <SkillDisplay data={data} key={index} />)}
+                    {otherSkills[0].map((data, index) =>
+                        <SkillDisplay data={data} key={index} />)}
                 </div>
                 {!isMobile ? <div>
-                    {otherSkills[1].map((data, index) => <SkillDisplay data={data} key={index} />)}
+                    {otherSkills[1].map((data, index) =>
+                        <SkillDisplay data={data} key={index} />)}
                 </div> : null}
             </div> : null}
             <div className={styles.seeMoreRoot}>

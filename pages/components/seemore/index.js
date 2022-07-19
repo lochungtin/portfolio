@@ -16,7 +16,10 @@ export default function SeeMore({ onClick }) {
             <p className={styles.text}>
                 {expanded ? 'See Less' : 'See More'}
             </p>
-            <Image src={`/icons/${expanded ? 'down' : 'up'}.svg`} width={20} height={20} alt='icon' />
+            <Image
+                src={`/icons/${expanded ? 'down' : 'up'}.svg`}
+                width={20} height={20} alt='icon'
+            />
         </button>
     )
 }

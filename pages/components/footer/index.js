@@ -19,9 +19,13 @@ export default function Footer() {
                 <Image src='/logo/logo_full_c.svg' width={200} height={50} alt='logo' />
             </div>
             <div className={styles.footerIconbar}>
-                {data.map(values => <a className={styles.footerBtn} key={values.name} href={values.link}>
-                    <Image src={`/icons/socials/${values.name}.svg`} width={25} height={25} alt={values.name} />
-                </a>)}
+                {data.map(values =>
+                    <a className={styles.footerBtn} key={values.name} href={values.link}>
+                        <Image
+                            src={`/icons/socials/${values.name}.svg`}
+                            width={25} height={25} alt={values.name}
+                        />
+                    </a>)}
             </div>
             <p>Made with 🧡 & ☕ by Timothy Lo</p>
             <p className={styles.footerARRtext}>Copyright © 2022 Lo Chung Tin. All Rights Reserved.</p>

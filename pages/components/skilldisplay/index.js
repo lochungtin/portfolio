@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import styles from './skilldisplay.module.css';
 
 export default function SkillDisplay({ data }) {

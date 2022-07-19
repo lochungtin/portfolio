@@ -16,18 +16,6 @@
     text-align: start;
 }
 
-.codeBox {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 0 20px 0;
-}
-
-.codeText {
-    font-size: 1rem;
-}
-
 .aboutCell {
     padding: 2rem;
 }
@@ -51,10 +39,6 @@
 @media only screen and (max-width: 768px) {
     .titleText {
         padding-left: 1rem;
-    }
-
-    .codeBox {
-        width: 90vw;
     }
 
     .aboutCellRoot {
@@ -98,10 +82,6 @@
 
     .titleText {
         margin-right: 4rem;
-    }
-
-    .codeBox {
-        padding: 20px 50px;
     }
 
     .aboutRow {

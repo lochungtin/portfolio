@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import Card from '../../components/card';
+import Card from '../../../components/card';
 
-import styles from './about.module.css';
+import styles from './codebox.module.css';
 
 export default function Codebox() {
     const [age, setAge] = useState(`"Loading ..."`);
@@ -15,8 +15,8 @@ export default function Codebox() {
 
     return (
         <Card>
-            <div className={styles.codeBox}>
-                <pre className={styles.codeText}>
+            <div className={styles.root}>
+                <pre className={styles.text}>
                     <code>const</code>{` person = {\n    `}
                     <span>name</span>{`: "Timothy Lo",\n    `}
                     <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}

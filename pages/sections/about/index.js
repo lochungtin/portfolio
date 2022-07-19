@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 import Card from '../../components/card';
 import SeeMore from '../../components/seemore';
-import SkillDisplay from '../../components/skilldisplay';
 import useMediaQuery from '../../utils/media';
 import Codebox from './codebox';
+import SkillDisplay from './skilldisplay';
 
 import styles from './about.module.css';
 

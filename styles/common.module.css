@@ -1,4 +1,4 @@
-.root {
+.bulletButtonRoot {
     align-items: center;
     background-color: #f7821b;
     border-radius: 40px;
@@ -9,7 +9,7 @@
     min-width: 10rem;
 }
 
-.text {
+.bulletButtonText {
     color: #ffffff;
     min-width: 5rem;
 }

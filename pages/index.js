@@ -8,7 +8,7 @@ import Achievements from './sections/achievements';
 import Education from './sections/education';
 import Projects from './sections/projects';
 
-import styles from '../styles/Home.module.css';
+import styles from '../styles/home.module.css';
 
 export default function Home() {
 	return (

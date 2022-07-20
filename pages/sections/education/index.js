@@ -9,12 +9,20 @@ export default function Education({ online, formal }) {
     const [selection, setSelection] = useState(1);
 
     let data;
-    if (selection)
-        data = Object.entries(formal);
-    else
-        data = Object.entries(online);
+    if (selection) {
+        if (formal === null)
+            return <div></div>;
 
-    const sorted = data.sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({name: k, ...v}));
+        data = Object.entries(formal);
+    }
+    else {
+        if (online === null)
+            return <div></div>;
+            
+        data = Object.entries(online);
+    }
+
+    const sorted = data.sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));
 
     return (
         <section id='education'>

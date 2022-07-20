@@ -4,12 +4,15 @@ import useMediaQuery from '../../utils/media';
 import commonStyles from '../../../styles/common.module.css';
 import styles from './achievements.module.css';
 
-export default function Achievements({data}) {
+export default function Achievements({ data }) {
     const isMobile = useMediaQuery();
 
-    const sorted = Object.entries(data).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({name: k, ...v}));
+    if (data === null)
+        return <div></div>;
+
+    const sorted = Object.entries(data).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));
     const len = sorted.length - 1;
-    
+
     return (
         <section id='achievements'>
             <p className={styles.title}>{isMobile ? '' : 'Other '}Achievements</p>

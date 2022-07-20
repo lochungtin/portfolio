@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { getAchievements, getFormalEducation, getOnlineEducation } from './api/firebase';
 import Footer from './components/footer';
 import Header from './components/header';
 import About from './sections/about';
@@ -9,8 +11,6 @@ import Education from './sections/education';
 import Projects from './sections/projects';
 
 import styles from '../styles/home.module.css';
-import { useEffect, useState } from 'react';
-import { getAchievements } from './api/firebase';
 
 export default function Home() {
 	const [r0, setR0] = useState(false);
@@ -28,6 +28,18 @@ export default function Home() {
 	const [d5, setD5] = useState({});
 
 	useEffect(() => {
+		if (!r2) {
+			getOnlineEducation().then(data => {
+				setD2(data);
+				setR2(true);
+			});
+		}
+		if (!r3) {
+			getFormalEducation().then(data => {
+				setD3(data);
+				setR3(true);
+			});
+		}
 		if (!r5) {
 			getAchievements().then(data => {
 				setD5(data);
@@ -35,8 +47,6 @@ export default function Home() {
 			});
 		}
 	});
-
-	console.log(d5);
 
 	return (
 		<>
@@ -51,9 +61,9 @@ export default function Home() {
 				<Header />
 				<main className={styles.main}>
 					<About />
-					<Education />
+					<Education online={d2} formal={d3} />
 					<Projects />
-					<Achievements data={d5}/>
+					<Achievements data={d5} />
 				</main>
 				<Footer />
 			</div>

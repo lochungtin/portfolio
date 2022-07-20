@@ -5,56 +5,16 @@ import BinarySelector from '../../components/binaryselector';
 import commonStyles from '../../../styles/common.module.css';
 import styles from './education.module.css';
 
-const formal = [
-    {
-        title: 'MRes AI and ML',
-        location: `Imperial College London`,
-        time: '2022 - Current',
-        score: 'Pending',
-    },
-    {
-        title: 'BSc Computer Science',
-        location: `King's College London`,
-        time: '2019 - 2022',
-        score: '79 (First Class Honours)',
-    },
-    {
-        title: `IBDP`,
-        location: 'HKCCCU Logos Academy',
-        time: '2017 - 2019',
-        score: '36/45',
-    },
-]
-
-const online = [
-    {
-        title: 'Reinforcement Learning Specialisation',
-        location: 'University of Alberta',
-        time: '2021 Summer',
-        score: 'Certificate of Participation',
-    },
-    {
-        title: 'Intro to TensorFlow for Deep Learning',
-        location: 'TensorFlow',
-        time: '2021 Summer',
-        score: 'n/a',
-    },
-    {
-        title: `CS50's Mobile App Development with React Native`,
-        location: 'Harvard University',
-        time: '2020 Summer',
-        score: 'Certificate of Participation',
-    },
-    {
-        title: 'Neural Networks and Deep Learning',
-        location: 'deeplearning.ai',
-        time: '2020 Summer',
-        score: 'Certificate of Participation',
-    },
-]
-
-export default function Education() {
+export default function Education({ online, formal }) {
     const [selection, setSelection] = useState(1);
+
+    let data;
+    if (selection)
+        data = Object.entries(formal);
+    else
+        data = Object.entries(online);
+
+    const sorted = data.sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({name: k, ...v}));
 
     return (
         <section id='education'>
@@ -64,18 +24,18 @@ export default function Education() {
                 val0='Online Courses' val1='Formal Education'
                 onClick={() => setSelection((selection + 1) % 2)}
             />
-            {(selection ? formal : online).map((data, index) =>
+            {sorted.map((data, index) =>
                 <div className={commonStyles.itemDetailBox} key={index}>
                     <div className={commonStyles.horizontalParagraphs}>
                         <p className={styles.titleContainer}>
-                            <span className={commonStyles.itemDetailTitle}>{data.title}</span>
-                            {` @ ${data.location}`}
+                            <span className={commonStyles.itemDetailTitle}>{data.name}</span>
+                            {` @ ${data.loc}`}
                         </p>
                         <p className={styles.eductationTimeText}><span>({data.time})</span></p>
                     </div>
                     <p className={styles.educationScoreText}>
                         {'Qualification: '}
-                        <b>{data.score}</b>
+                        <b>{data.qual}</b>
                     </p>
                 </div>)}
         </section>

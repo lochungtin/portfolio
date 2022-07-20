@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+import { obj2arr } from '../../api/firebase';
 import Card from '../../components/card';
 import SeeMore from '../../components/seemore';
 import useMediaQuery from '../../utils/media';
@@ -9,42 +10,23 @@ import SkillDisplay from './skilldisplay';
 
 import styles from './about.module.css';
 
-const mainSkills = [
-    { icon: 'reactjs', name: 'React Family', subtext: 'ReactJS, React Native, NextJS, Redux' },
-    { icon: 'python', name: 'Python', subtext: 'NumPy, PyTorch, TensorFlow, TKinter' },
-    { icon: 'cpp', name: 'C++', subtext: 'Arduino, Expressif, OpenGl, OpenCV' },
-];
-
-const skills = [
-    { name: 'JavaScript', rating: 5 },
-    { name: 'TypeScript', rating: 5 },
-    { name: 'CPP', rating: 4 },
-    { name: 'Python', rating: 5 },
-    { name: 'HTML5', rating: 5 },
-    { name: 'ReactJS', rating: 4 },
-    { name: 'D3JS', rating: 3 },
-    { name: 'ExpressJS', rating: 4 },
-    { name: 'MongoDB', rating: 4 },
-    { name: 'MySQL', rating: 3 },
-    { name: 'NumPy', rating: 4 },
-    { name: 'Jupyter', rating: 4 },
-    { name: 'TensorFlow', rating: 3 },
-    { name: 'PyTorch', rating: 4 },
-    { name: 'Arduino', rating: 5 },
-    { name: 'Espressif', rating: 5 },
-    { name: 'RaspberryPI', rating: 4 },
-    { name: 'Bluetooth', rating: 3 },
-]
-
-export default function About() {
+export default function About({ main, other }) {
     const [moreSkills, toggleMoreSkills] = useState(false);
     const isMobile = useMediaQuery();
 
+    if (!main)
+        return <div></div>;
+
+    const mainSkills = obj2arr(main);
+
+    if (!other)
+        return <div></div>;
+
     const otherSkills = [[], []];
     if (!isMobile)
-        skills.forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
+        obj2arr(other).forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
     else
-        otherSkills[0] = skills;
+        otherSkills[0] = obj2arr(other);
 
     return (
         <section id='about'>

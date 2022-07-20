@@ -1,28 +1,16 @@
 import { useState } from 'react';
 
+import { obj2arr } from '../../api/firebase';
 import BinarySelector from '../../components/binaryselector';
+import styles from './education.module.css';
 
 import commonStyles from '../../../styles/common.module.css';
-import styles from './education.module.css';
 
 export default function Education({ online, formal }) {
     const [selection, setSelection] = useState(1);
 
-    let data;
-    if (selection) {
-        if (!formal)
-            return <div></div>;
-
-        data = Object.entries(formal);
-    }
-    else {
-        if (!online)
-            return <div></div>;
-
-        data = Object.entries(online);
-    }
-
-    const sorted = data.sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));
+    if (!formal || !online)
+        return <div></div>;
 
     return (
         <section id='education'>
@@ -32,7 +20,7 @@ export default function Education({ online, formal }) {
                 val0='Online Courses' val1='Formal Education'
                 onClick={() => setSelection((selection + 1) % 2)}
             />
-            {sorted.map((data, index) =>
+            {obj2arr(selection ? formal : online).map((data, index) =>
                 <div className={commonStyles.itemDetailBox} key={index}>
                     <div className={commonStyles.horizontalParagraphs}>
                         <p className={styles.titleContainer}>

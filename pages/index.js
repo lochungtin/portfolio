@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { getAchievements, getFormalEducation, getOnlineEducation } from './api/firebase';
+import { getAchievements, getFormalEducation, getMainSkills, getOnlineEducation, getOtherSkills } from './api/firebase';
 import Footer from './components/footer';
 import Header from './components/header';
 import About from './sections/about';
@@ -28,24 +28,31 @@ export default function Home() {
 	const [d5, setD5] = useState({});
 
 	useEffect(() => {
-		if (!r2) {
+		if (!r0)
+			getMainSkills().then(data => {
+				setD0(data);
+				setR0(true);
+			});
+		if (!r1)
+			getOtherSkills().then(data => {
+				setD1(data);
+				setR1(true);
+			});
+		if (!r2)
 			getOnlineEducation().then(data => {
 				setD2(data);
 				setR2(true);
 			});
-		}
-		if (!r3) {
+		if (!r3)
 			getFormalEducation().then(data => {
 				setD3(data);
 				setR3(true);
 			});
-		}
-		if (!r5) {
+		if (!r5)
 			getAchievements().then(data => {
 				setD5(data);
 				setR5(true);
 			});
-		}
 	});
 
 	return (
@@ -60,7 +67,7 @@ export default function Home() {
 
 				<Header />
 				<main className={styles.main}>
-					<About />
+					<About main={d0} other={d1} />
 					<Education online={d2} formal={d3} />
 					<Projects />
 					<Achievements data={d5} />

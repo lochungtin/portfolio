@@ -1,3 +1,4 @@
+import { obj2arr } from '../../api/firebase';
 import ReadMore from '../../components/readmore';
 import useMediaQuery from '../../utils/media';
 
@@ -10,7 +11,7 @@ export default function Achievements({ data }) {
     if (!data)
         return <div></div>;
 
-    const sorted = Object.entries(data).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));
+    const sorted = obj2arr(data);
     const len = sorted.length - 1;
 
     return (

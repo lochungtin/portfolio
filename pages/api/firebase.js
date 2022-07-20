@@ -21,3 +21,5 @@ export const getFormalEducation = () => get(ref(db, 'education/formal')).then(s 
 export const getOnlineEducation = () => get(ref(db, 'education/online')).then(s => s.val());
 
 export const getAchievements = () => get(ref(db, 'achievements/')).then(s => s.val());
+
+export const obj2arr = obj => Object.entries(obj).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));

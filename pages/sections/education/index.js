@@ -15,7 +15,9 @@ export default function Education({ online, formal }) {
 
     return (
         <section id='education'>
-            <p className={`${textStyles.sectionTitle} ${textStyles.grey}`}>Education</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.grey}`}>
+                <b>Education</b>
+            </p>
             <BinarySelector
                 selection={selection}
                 val0='Online Courses' val1='Formal Education'
@@ -25,7 +27,9 @@ export default function Education({ online, formal }) {
                 <div className={commonStyles.itemDetailBox} key={index}>
                     <div className={commonStyles.horizontalParagraphs}>
                         <p className={styles.titleContainer}>
-                            <span className={commonStyles.itemDetailTitle}>{data.name}</span>
+                            <span className={textStyles.itemDetailTitle}>
+                                <b>{data.name}</b>
+                            </span>
                             {` @ ${data.loc}`}
                         </p>
                         <p className={styles.eductationTimeText}><span>({data.time})</span></p>

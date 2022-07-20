@@ -53,7 +53,9 @@ export default function About({ main, other }) {
                     <p>After gaining a good grip on React and React Native, I am now branching out to other web and mobile frameworks such as <code>NextJS</code> and <code>Flutter</code>.</p>
                 </Card>
             </div>
-            <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>My Skills</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>
+                <b>My Skills</b>
+            </p>
             <div className={commonStyles.halfRow}>
                 {mainSkills.map((data, index) =>
                     <Card style={styles.mainSkillCell} key={index}>

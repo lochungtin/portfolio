@@ -21,7 +21,9 @@ export default function Projects({ pinned }) {
 
     return (
         <section id='projects'>
-            <p className={`${textStyles.sectionTitle} ${textStyles.orange}`}>Projects</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.orange}`}>
+                <b>Projects</b>
+            </p>
             <div className={`${commonStyles.halfRow} ${styles.projectRow}`}>
                 <div>
                     {projects[0].map((data, index) =>

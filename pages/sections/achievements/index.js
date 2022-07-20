@@ -18,12 +18,14 @@ export default function Achievements({ data }) {
     return (
         <section id='achievements'>
             <p className={`${textStyles.sectionTitle} ${textStyles.grey}`}>
-                {isMobile ? 'Achievements' : 'Other Achievements'}
+                <b>{isMobile ? 'Achievements' : 'Other Achievements'}</b>
             </p>
             {sorted.map((data, index) =>
                 <div className={len === index ? styles.lastBox : commonStyles.itemDetailBox} key={index}>
                     <div className={commonStyles.horizontalParagraphs}>
-                        <p className={commonStyles.itemDetailTitle}>{data.name}</p>
+                        <p className={textStyles.itemDetailTitle}>
+                            <b>{data.name}</b>
+                        </p>
                         <p className={textStyles.grey}>({data.time})</p>
                     </div>
                     <b>{data.desc}</b>

@@ -1,21 +1,9 @@
-.title {
-    color: #555555;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin-top: 4rem;
-}
-
 .lastBox {
     border: none;
     margin-top: 4rem;
     padding-bottom: 0;
     padding-left: 2rem;
     padding-right: 2rem;
-}
-
-.timeText {
-    color: #555555;
 }
 
 .readMore {

@@ -24,7 +24,7 @@ export default function Achievements({ data }) {
                 <div className={len === index ? styles.lastBox : commonStyles.itemDetailBox} key={index}>
                     <div className={commonStyles.horizontalParagraphs}>
                         <p className={commonStyles.itemDetailTitle}>{data.name}</p>
-                        <p className={styles.timeText}>({data.time})</p>
+                        <p className={textStyles.grey}>({data.time})</p>
                     </div>
                     <b>{data.desc}</b>
                     <p>{data.long}</p>

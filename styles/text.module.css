@@ -6,6 +6,14 @@
     color: #555555;
 }
 
+.lgrey {
+    color: #aaaaaa;
+}
+
+.white {
+    color: #ffffff;
+}
+
 .sectionTitle {
     font-size: 2.5rem;
     font-weight: bold;

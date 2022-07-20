@@ -21,10 +21,6 @@
     background-color: #f7821b;
 }
 
-.selectedText {
-    color: #ffffff; 
-}
-
 @media only screen and (max-width: 768px) {
     .root {
         width: 90vw;

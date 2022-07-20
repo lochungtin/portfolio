@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import textStyles from '../../../styles/text.module.css';
 import styles from './footer.module.css';
 
 const data = [
@@ -28,7 +29,7 @@ export default function Footer() {
                     </a>)}
             </div>
             <p>Made with 🧡 & ☕ by Timothy Lo</p>
-            <p className={styles.footerARRtext}>Copyright © 2022 Lo Chung Tin. All Rights Reserved.</p>
+            <p className={`${styles.footerARRtext} ${textStyles.lgrey}`}>Copyright © 2022 Lo Chung Tin. All Rights Reserved.</p>
         </footer>
     );
 }

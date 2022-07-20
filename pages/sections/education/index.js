@@ -10,15 +10,15 @@ export default function Education({ online, formal }) {
 
     let data;
     if (selection) {
-        if (formal === null)
+        if (!formal)
             return <div></div>;
 
         data = Object.entries(formal);
     }
     else {
-        if (online === null)
+        if (!online)
             return <div></div>;
-            
+
         data = Object.entries(online);
     }
 

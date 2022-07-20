@@ -7,7 +7,7 @@ import styles from './achievements.module.css';
 export default function Achievements({ data }) {
     const isMobile = useMediaQuery();
 
-    if (data === null)
+    if (!data)
         return <div></div>;
 
     const sorted = Object.entries(data).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));

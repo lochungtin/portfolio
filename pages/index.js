@@ -9,8 +9,35 @@ import Education from './sections/education';
 import Projects from './sections/projects';
 
 import styles from '../styles/home.module.css';
+import { useEffect, useState } from 'react';
+import { getAchievements } from './api/firebase';
 
 export default function Home() {
+	const [r0, setR0] = useState(false);
+	const [r1, setR1] = useState(false);
+	const [r2, setR2] = useState(false);
+	const [r3, setR3] = useState(false);
+	// const [r4, setR4] = useState(false);
+	const [r5, setR5] = useState(false);
+
+	const [d0, setD0] = useState({});
+	const [d1, setD1] = useState({});
+	const [d2, setD2] = useState({});
+	const [d3, setD3] = useState({});
+	// const [d4, setD4] = useState({});
+	const [d5, setD5] = useState({});
+
+	useEffect(() => {
+		if (!r5) {
+			getAchievements().then(data => {
+				setD5(data);
+				setR5(true);
+			});
+		}
+	});
+
+	console.log(d5);
+
 	return (
 		<>
 			<Image className={styles.bgImg} src='/bg/about.svg' layout='fill' alt='bg' />
@@ -26,7 +53,7 @@ export default function Home() {
 					<About />
 					<Education />
 					<Projects />
-					<Achievements />
+					<Achievements data={d5}/>
 				</main>
 				<Footer />
 			</div>

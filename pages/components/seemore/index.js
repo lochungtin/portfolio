@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import commonStyles from '../../../styles/common.module.css';
 
-export default function SeeMore({ onClick }) {
+export default function SeeMore({ onClick, style }) {
     const [expanded, toggleExpanded] = useState(false);
 
     const toggle = () => {
@@ -12,7 +12,7 @@ export default function SeeMore({ onClick }) {
     }
 
     return (
-        <button className={commonStyles.bulletButtonRoot} onClick={toggle}>
+        <button className={`${commonStyles.bulletButtonRoot} ${style}`} onClick={toggle}>
             <p className={commonStyles.bulletButtonText}>
                 {expanded ? 'See Less' : 'See More'}
             </p>

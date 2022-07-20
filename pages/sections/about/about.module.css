@@ -3,14 +3,11 @@
 }
 
 .title {
-    color: #f7821b;
     font-size: 2.5rem;
-    font-weight: bold;
     line-height: 0px;
 }
 
 .subtitle {
-    color: #555555;
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: start;
@@ -32,7 +29,7 @@
     text-align: center;
 }
 
-.seeMoreRoot {
+.seeMore {
     margin-top: 2rem;
 }
 
@@ -41,11 +38,8 @@
         padding-left: 1rem;
     }
 
-    .aboutCellRoot {
-        margin-top: 2rem;
-    }
-
     .aboutCell{
+        margin-top: 2rem;
         width: 90vw;
     }
     
@@ -54,11 +48,8 @@
         margin-bottom: 1rem;
     }
 
-    .mainSkillCellRoot {
-        margin-top: 2rem;
-    }
-
     .mainSkillCell {
+        margin-top: 2rem;
         width: 90vw;
     }
 
@@ -89,14 +80,10 @@
         margin-bottom: 4rem;
     }
 
-    .aboutCellRoot {
+    .aboutCell {
         height: inherit;
         margin-left: 1rem;
         margin-right: 1rem;
-    }
-
-    .aboutCell {
-        height: inherit;
         width: 25rem;
     }
 
@@ -104,12 +91,9 @@
         margin-bottom: 0.5rem;
     }
 
-    .mainSkillCellRoot {
+    .mainSkillCell {
         margin-left: 1rem;
         margin-right: 1rem;
-    }
-
-    .mainSkillCell {
         width: 12rem;
     }
 

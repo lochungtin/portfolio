@@ -28,9 +28,8 @@ export default function Achievements({ data }) {
                     </div>
                     <b>{data.desc}</b>
                     <p>{data.long}</p>
-                    <div className={styles.readmoreContainer}>
-                        {data.href ? <ReadMore href={data.href} /> : null}
-                    </div>
+                    {data.href ?
+                        <ReadMore href={data.href} style={styles.readMore} /> : null}
                 </div>)}
         </section>
     );

@@ -1,8 +1,8 @@
 import styles from './binaryselector.module.css';
 
-export default function BinarySelector({ val0, val1, selection, onClick }) {
+export default function BinarySelector({ val0, val1, selection, onClick, style }) {
     return (
-        <div className={styles.root}>
+        <div className={`${styles.root} ${style}`}>
             <button className={`${styles.selection} ${selection === 0 ? styles.selectedDiv : ''}`} onClick={onClick}>
                 <p className={`${selection === 0 ? styles.selectedText : ''}`}>{val0}</p>
             </button>

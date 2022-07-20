@@ -5,3 +5,16 @@
     margin-bottom: 0rem;
     margin-top: 4rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .projectRow {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .projectRow {
+        margin-bottom: 2rem;
+    }
+}

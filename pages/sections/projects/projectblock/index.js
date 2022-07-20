@@ -4,6 +4,7 @@ import ReadMore from '../../../components/readmore';
 
 import commonStyles from '../../../../styles/common.module.css';
 import styles from './projectblock.module.css';
+import Image from 'next/image';
 
 export default function ProjectBlock({ data }) {
     if (!data)
@@ -22,6 +23,12 @@ export default function ProjectBlock({ data }) {
                             </div>)}
                     </div>
                     <div className={styles.readMoreContainer}>
+                        <a className={styles.ghBtn} href={`https://github.com/lochungtin/${data.repo}`}>
+                            <Image
+                                src='/icons/socials/github.svg'
+                                width={30} height={30} alt='gh'
+                            />
+                        </a>
                         <ReadMore href={data.href} />
                     </div>
                 </div>

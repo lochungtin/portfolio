@@ -64,7 +64,7 @@ export default function Projects({ }) {
     return (
         <section id='projects'>
             <p className={styles.title}>Projects</p>
-            <div className={`${commonStyles.halfRow} ${''}`}>
+            <div className={`${commonStyles.halfRow} ${styles.projectRow}`}>
                 <div>
                     {projects[0].map((data, index) =>
                         <ProjectBlock data={data} key={index} />)}

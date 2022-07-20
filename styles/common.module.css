@@ -36,6 +36,14 @@
 }
 
 @media only screen and (min-width: 769px) {
+    .halfRow {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
     .itemDetailBox {
         width: 40rem;
     }

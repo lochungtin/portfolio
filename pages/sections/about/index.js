@@ -8,6 +8,7 @@ import useMediaQuery from '../../utils/media';
 import Codebox from './codebox';
 import SkillDisplay from './skilldisplay';
 
+import commonStyles from '../../../styles/common.module.css';
 import styles from './about.module.css';
 
 export default function About({ main, other }) {
@@ -23,14 +24,14 @@ export default function About({ main, other }) {
         return <div></div>;
 
     const otherSkills = [[], []];
-    if (!isMobile)
-        obj2arr(other).forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
-    else
+    if (isMobile)
         otherSkills[0] = obj2arr(other);
+    else
+        obj2arr(other).forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
 
     return (
         <section id='about'>
-            <div className={styles.row}>
+            <div className={commonStyles.halfRow}>
                 <div className={styles.titleText}>
                     <p className={styles.welcome}>Hi there! I am</p>
                     <p className={styles.title}>Timothy Lo</p>
@@ -38,7 +39,7 @@ export default function About({ main, other }) {
                 </div>
                 <Codebox />
             </div>
-            <div className={`${styles.row} ${styles.aboutRow}`}>
+            <div className={`${commonStyles.halfRow} ${styles.aboutRow}`}>
                 <div className={styles.aboutCellRoot}>
                     <Card>
                         <div className={styles.aboutCell}>
@@ -60,7 +61,7 @@ export default function About({ main, other }) {
                 </div>
             </div>
             <p className={`${styles.title} ${styles.skillTitle}`}>My Skills</p>
-            <div className={`${styles.row} ${''}`}>
+            <div className={commonStyles.halfRow}>
                 {mainSkills.map((data, index) =>
                     <div className={styles.mainSkillCellRoot} key={index}>
                         <Card>
@@ -75,7 +76,7 @@ export default function About({ main, other }) {
                         </Card>
                     </div>)}
             </div>
-            {moreSkills ? <div className={`${styles.row} ${styles.skillRow}`}>
+            {moreSkills ? <div className={`${commonStyles.halfRow} ${styles.skillRow}`}>
                 <div>
                     {otherSkills[0].map((data, index) =>
                         <SkillDisplay data={data} key={index} />)}

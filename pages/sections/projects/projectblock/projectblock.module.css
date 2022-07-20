@@ -1,0 +1,49 @@
+.root {
+    padding: 1rem 1rem 4rem 1rem;
+}
+
+.desc {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.tagContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tag {
+    font-size: 0.9rem;
+    border: 1px solid #f5b278;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.readMoreContainer {
+    float: right;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .spacer {
+        margin-top: 1rem;
+    }
+
+    .root {
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .spacer {
+        margin: 1rem;
+    }
+
+    .root {
+        height: 18rem;
+        width: 25rem;
+    }
+}

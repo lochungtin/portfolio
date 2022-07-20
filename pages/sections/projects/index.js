@@ -4,6 +4,7 @@ import useMediaQuery from '../../utils/media';
 import ProjectBlock from './projectblock';
 
 import commonStyles from '../../../styles/common.module.css';
+import textStyles from '../../../styles/text.module.css';
 import styles from './projects.module.css';
 
 export default function Projects({ pinned }) {
@@ -20,7 +21,7 @@ export default function Projects({ pinned }) {
 
     return (
         <section id='projects'>
-            <p className={styles.title}>Projects</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.orange}`}>Projects</p>
             <div className={`${commonStyles.halfRow} ${styles.projectRow}`}>
                 <div>
                     {projects[0].map((data, index) =>

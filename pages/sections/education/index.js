@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 import { obj2arr } from '../../api/firebase';
 import BinarySelector from '../../components/binaryselector';
-import styles from './education.module.css';
 
 import commonStyles from '../../../styles/common.module.css';
+import textStyles from '../../../styles/text.module.css';
+import styles from './education.module.css';
 
 export default function Education({ online, formal }) {
     const [selection, setSelection] = useState(1);
@@ -14,7 +15,7 @@ export default function Education({ online, formal }) {
 
     return (
         <section id='education'>
-            <p className={styles.title}>Education</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.grey}`}>Education</p>
             <BinarySelector
                 selection={selection}
                 val0='Online Courses' val1='Formal Education'

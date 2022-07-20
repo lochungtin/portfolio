@@ -9,6 +9,7 @@ import Codebox from './codebox';
 import SkillDisplay from './skilldisplay';
 
 import commonStyles from '../../../styles/common.module.css';
+import textStyles from '../../../styles/text.module.css';
 import styles from './about.module.css';
 
 export default function About({ main, other }) {
@@ -60,7 +61,7 @@ export default function About({ main, other }) {
                     </Card>
                 </div>
             </div>
-            <p className={`${styles.title} ${styles.skillTitle}`}>My Skills</p>
+            <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>My Skills</p>
             <div className={commonStyles.halfRow}>
                 {mainSkills.map((data, index) =>
                     <div className={styles.mainSkillCellRoot} key={index}>

@@ -1,10 +1,11 @@
+import Image from 'next/image';
+
 import { obj2arr } from '../../../api/firebase';
 import Card from '../../../components/card';
 import ReadMore from '../../../components/readmore';
 
 import commonStyles from '../../../../styles/common.module.css';
 import styles from './projectblock.module.css';
-import Image from 'next/image';
 
 export default function ProjectBlock({ data }) {
     if (!data)

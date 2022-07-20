@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { getAchievements, getFormalEducation, getMainSkills, getOnlineEducation, getOtherSkills } from './api/firebase';
+import { getAchievements, getFormalEducation, getMainSkills, getOnlineEducation, getOtherSkills, getPinnedProjects } from './api/firebase';
 import Footer from './components/footer';
 import Header from './components/header';
 import About from './sections/about';
@@ -17,14 +17,14 @@ export default function Home() {
 	const [r1, setR1] = useState(false);
 	const [r2, setR2] = useState(false);
 	const [r3, setR3] = useState(false);
-	// const [r4, setR4] = useState(false);
+	const [r4, setR4] = useState(false);
 	const [r5, setR5] = useState(false);
 
 	const [d0, setD0] = useState({});
 	const [d1, setD1] = useState({});
 	const [d2, setD2] = useState({});
 	const [d3, setD3] = useState({});
-	// const [d4, setD4] = useState({});
+	const [d4, setD4] = useState({});
 	const [d5, setD5] = useState({});
 
 	useEffect(() => {
@@ -48,6 +48,11 @@ export default function Home() {
 				setD3(data);
 				setR3(true);
 			});
+		if (!r4)
+			getPinnedProjects().then(data => {
+				setD4(data);
+				setR4(true);
+			});
 		if (!r5)
 			getAchievements().then(data => {
 				setD5(data);
@@ -69,7 +74,7 @@ export default function Home() {
 				<main className={styles.main}>
 					<About main={d0} other={d1} />
 					<Education online={d2} formal={d3} />
-					<Projects />
+					<Projects pinned={d4} />
 					<Achievements data={d5} />
 				</main>
 				<Footer />

@@ -13,7 +13,7 @@ export default function SkillDisplay({ data }) {
                 <Image src={src} width={20} height={20} alt={data.name} />
                 <p>{data.name}</p>
                 <div className={styles.dotContainer}>
-                    {(new Array(data.rating).fill(1)).map((d, i) => 
+                    {(new Array(data.lvl).fill(1)).map((d, i) => 
                         <div className={styles.marker} key={i}></div>)}
                 </div>
             </div>

@@ -9,9 +9,9 @@ import About from './sections/about';
 import Achievements from './sections/achievements';
 import Education from './sections/education';
 import Projects from './sections/projects';
+import Skills from './sections/skills';
 
 import styles from '../styles/home.module.css';
-import Skills from './sections/skills';
 
 export default function Home() {
 	const [r0, setR0] = useState(false);

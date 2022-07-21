@@ -7,8 +7,8 @@ export default function SkillDisplay({ data }) {
         return <div></div>
 
     const src = `/icons/tech/${data.name.toLowerCase()}.svg`;
+    
     return (
-        <div className={styles.spacer}>
             <div className={styles.root}>
                 <Image src={src} width={20} height={20} alt={data.name} />
                 <p>{data.name}</p>
@@ -17,6 +17,5 @@ export default function SkillDisplay({ data }) {
                         <div className={styles.marker} key={i}></div>)}
                 </div>
             </div>
-        </div>
     );
 }

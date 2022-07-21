@@ -1,12 +1,11 @@
 @media only screen and (max-width: 768px) {
     .projectRow {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+        margin: 1rem 0 2rem 0;
     }
 }
 
 @media only screen and (min-width: 769px) {
     .projectRow {
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
 }

@@ -2,7 +2,6 @@
     align-items: center;
     border-bottom: 1px solid #eaeaea;
     display: flex;
-    flex: 1;
     justify-content: center;
     padding: 2rem 0;
 }
@@ -25,7 +24,6 @@
     .logo {
         align-items: center;
         display: flex;
-        flex: 1;
         justify-content: center;
         width: inherit;
     }
@@ -39,8 +37,7 @@
 
 @media only screen and (min-width: 769px) {
     .headerLink {
-        margin-left: 30px;
-        margin-right: 30px;
-        width: 75px;
+        margin: 0 2rem;
+        width: 4.5rem;
     }
 }

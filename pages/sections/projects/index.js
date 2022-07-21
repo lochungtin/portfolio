@@ -24,7 +24,7 @@ export default function Projects({ pinned }) {
             <p className={`${textStyles.sectionTitle} ${textStyles.orange}`}>
                 <b>Projects</b>
             </p>
-            <div className={`${commonStyles.halfRow} ${styles.projectRow}`}>
+            <div className={`${commonStyles.row} ${styles.projectRow}`}>
                 <div>
                     {projects[0].map((data, index) =>
                         <ProjectBlock data={data} key={index} />)}

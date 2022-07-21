@@ -32,7 +32,7 @@ export default function About({ main, other }) {
 
     return (
         <section id='about'>
-            <div className={commonStyles.halfRow}>
+            <div className={`${commonStyles.row} ${styles.topRow}`}>
                 <div className={styles.titleText}>
                     <p className={styles.welcome}>Hi there! I am</p>
                     <p className={`${styles.title} ${textStyles.orange}`}><b>Timothy Lo</b></p>
@@ -40,7 +40,7 @@ export default function About({ main, other }) {
                 </div>
                 <Codebox />
             </div>
-            <div className={`${commonStyles.halfRow} ${styles.aboutRow}`}>
+            <div className={`${commonStyles.row} ${styles.aboutRow}`}>
                 <Card style={styles.aboutCell}>
                     <p className={`${styles.title} ${textStyles.orange}`}><b>AI and ML</b></p>
                     <p>I have taken a handful of online courses about both supervised and reinforcement learning and have taught myself to use popular ML frameworks such as <code>TensorFlow</code> and <code>PyTorch</code>.</p>
@@ -56,7 +56,7 @@ export default function About({ main, other }) {
             <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>
                 <b>My Skills</b>
             </p>
-            <div className={commonStyles.halfRow}>
+            <div className={commonStyles.row}>
                 {mainSkills.map((data, index) =>
                     <Card style={styles.mainSkillCell} key={index}>
                         <Image
@@ -67,7 +67,7 @@ export default function About({ main, other }) {
                         <p className={styles.skillText}><code>{data.subtext}</code></p>
                     </Card>)}
             </div>
-            {moreSkills ? <div className={`${commonStyles.halfRow} ${styles.skillRow}`}>
+            {moreSkills ? <div className={`${commonStyles.row} ${styles.skillRow}`}>
                 <div>
                     {otherSkills[0].map((data, index) =>
                         <SkillDisplay data={data} key={index} />)}

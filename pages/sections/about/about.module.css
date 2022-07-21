@@ -4,7 +4,7 @@
 
 .title {
     font-size: 2.5rem;
-    line-height: 0px;
+    line-height: 0;
 }
 
 .subtitle {
@@ -42,11 +42,6 @@
         margin-top: 2rem;
         width: 90vw;
     }
-    
-    .skillTitle {
-        margin-top: 4rem;
-        margin-bottom: 1rem;
-    }
 
     .mainSkillCell {
         margin-top: 2rem;
@@ -63,11 +58,7 @@
 }
 
 @media only screen and (min-width: 769px) {
-    .row {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .topRow {
         margin-top: 4rem;
     }
 
@@ -77,23 +68,17 @@
 
     .aboutRow {
         height: 25rem;
-        margin-bottom: 4rem;
+        margin-top: 4rem;
     }
 
     .aboutCell {
         height: inherit;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 0 1rem;
         width: 25rem;
     }
 
-    .skillTitle {
-        margin-bottom: 0.5rem;
-    }
-
     .mainSkillCell {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 2rem 1rem 0 1rem;
         width: 12rem;
     }
 

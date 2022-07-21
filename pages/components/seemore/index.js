@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
+import textStyles from '../../../styles/text.module.css';
 import commonStyles from '../../../styles/common.module.css';
 
 export default function SeeMore({ onClick, style }) {
@@ -13,7 +14,7 @@ export default function SeeMore({ onClick, style }) {
 
     return (
         <button className={`${commonStyles.bulletButtonRoot} ${style}`} onClick={toggle}>
-            <p className={commonStyles.bulletButtonText}>
+            <p className={textStyles.bulletButtonText}>
                 {expanded ? 'See Less' : 'See More'}
             </p>
             <Image

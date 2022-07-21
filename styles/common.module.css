@@ -1,25 +1,17 @@
 .bulletButtonRoot {
     align-items: center;
     background-color: #f7821b;
-    border-radius: 40px;
+    border-radius: 1.125rem;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
     display: flex;
-    height: 35px;
+    height: 2.25rem;
     justify-content: center;
     min-width: 10rem;
 }
 
-.bulletButtonText {
-    color: #ffffff;
-    min-width: 5rem;
-}
-
 .itemDetailBox {
     border-bottom: 1px solid #eaeaea;
-    margin-top: 4rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem
 }
 
 @media only screen and (max-width: 768px) {
@@ -29,12 +21,11 @@
 }
 
 @media only screen and (min-width: 769px) {
-    .halfRow {
+    .row {
         align-items: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 4rem;
     }
 
     .itemDetailBox {

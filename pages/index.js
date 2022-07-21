@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 import { getAchievements, getFormalEducation, getMainSkills, getOnlineEducation, getOtherSkills, getPinnedProjects } from './api/firebase';
 import Footer from './components/footer';

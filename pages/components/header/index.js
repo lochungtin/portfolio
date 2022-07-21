@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+
+import useMediaQuery from '../../utils/media';
 
 import styles from './header.module.css';
-import useMediaQuery from '../../utils/media';
-import { useState } from 'react';
 
 export default function Header() {
     const [expanded, toggleExpanded] = useState(false);

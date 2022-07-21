@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import textStyles from '../../../styles/text.module.css';
 import commonStyles from '../../../styles/common.module.css';
+import textStyles from '../../../styles/text.module.css';
 
 export default function SeeMore({ onClick, style }) {
     const [expanded, toggleExpanded] = useState(false);

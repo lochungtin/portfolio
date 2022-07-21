@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import textStyles from '../../../styles/text.module.css';
 import commonStyles from '../../../styles/common.module.css';
+import textStyles from '../../../styles/text.module.css';
 
 export default function ReadMore({ textOverride, href, style }) {
     return (

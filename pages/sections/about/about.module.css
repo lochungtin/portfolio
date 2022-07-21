@@ -9,7 +9,6 @@
 
 .subtitle {
     font-size: 1.5rem;
-    line-height: 1.5rem;
     text-align: start;
 }
 
@@ -17,43 +16,14 @@
     padding: 2rem;
 }
 
-.mainSkillCell {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 2rem;
-}
-
-.skillText {
-    text-align: center;
-}
-
-.seeMore {
-    margin-top: 2rem;
-}
-
 @media only screen and (max-width: 768px) {
-    .titleText {
+    .titleContainer {
         padding-left: 1rem;
     }
 
     .aboutCell{
         margin-top: 2rem;
         width: 90vw;
-    }
-
-    .mainSkillCell {
-        margin-top: 2rem;
-        width: 90vw;
-    }
-
-    .skillText {
-        width: 70vw;
-    }
-
-    .skillRow {
-        margin-top: 1rem;
     }
 }
 
@@ -62,7 +32,7 @@
         margin-top: 4rem;
     }
 
-    .titleText {
+    .titleContainer {
         margin-right: 4rem;
     }
 
@@ -75,14 +45,5 @@
         height: inherit;
         margin: 0 1rem;
         width: 25rem;
-    }
-
-    .mainSkillCell {
-        margin: 2rem 1rem 0 1rem;
-        width: 12rem;
-    }
-
-    .skillText {
-        width: 10rem;
     }
 }

@@ -11,6 +11,7 @@ import Education from './sections/education';
 import Projects from './sections/projects';
 
 import styles from '../styles/home.module.css';
+import Skills from './sections/skills';
 
 export default function Home() {
 	const [r0, setR0] = useState(false);
@@ -72,7 +73,8 @@ export default function Home() {
 
 				<Header />
 				<main className={styles.main}>
-					<About main={d0} other={d1} />
+					<About />
+					<Skills main={d0} other={d1} />
 					<Education online={d2} formal={d3} />
 					<Projects pinned={d4} />
 					<Achievements data={d5} />

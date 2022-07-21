@@ -1,39 +1,15 @@
-import { useState } from 'react';
-import Image from 'next/image';
-
-import { obj2arr } from '../../api/firebase';
 import Card from '../../components/card';
-import SeeMore from '../../components/seemore';
-import useMediaQuery from '../../utils/media';
 import Codebox from './codebox';
-import SkillDisplay from './skilldisplay';
 
 import commonStyles from '../../../styles/common.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './about.module.css';
 
-export default function About({ main, other }) {
-    const [moreSkills, toggleMoreSkills] = useState(false);
-    const isMobile = useMediaQuery();
-
-    if (!main)
-        return <div></div>;
-
-    const mainSkills = obj2arr(main);
-
-    if (!other)
-        return <div></div>;
-
-    const otherSkills = [[], []];
-    if (isMobile)
-        otherSkills[0] = obj2arr(other);
-    else
-        obj2arr(other).forEach((data, index) => otherSkills[(index % 2 === 1) * 1].push(data));
-
+export default function About() {
     return (
         <section id='about'>
             <div className={`${commonStyles.row} ${styles.topRow}`}>
-                <div className={styles.titleText}>
+                <div className={styles.titleContainer}>
                     <p className={styles.welcome}>Hi there! I am</p>
                     <p className={`${styles.title} ${textStyles.orange}`}><b>Timothy Lo</b></p>
                     <p className={`${styles.subtitle} ${textStyles.grey}`}>Machine Learning Research Student</p>
@@ -53,31 +29,6 @@ export default function About({ main, other }) {
                     <p>After gaining a good grip on React and React Native, I am now branching out to other web and mobile frameworks such as <code>NextJS</code> and <code>Flutter</code>.</p>
                 </Card>
             </div>
-            <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>
-                <b>My Skills</b>
-            </p>
-            <div className={commonStyles.row}>
-                {mainSkills.map((data, index) =>
-                    <Card style={styles.mainSkillCell} key={index}>
-                        <Image
-                            src={`/icons/tech/${data.icon}.svg`}
-                            width={60} height={60} alt='react'
-                        />
-                        <p className={styles.subtitle}>{data.name}</p>
-                        <p className={styles.skillText}><code>{data.subtext}</code></p>
-                    </Card>)}
-            </div>
-            {moreSkills ? <div className={`${commonStyles.row} ${styles.skillRow}`}>
-                <div>
-                    {otherSkills[0].map((data, index) =>
-                        <SkillDisplay data={data} key={index} />)}
-                </div>
-                {!isMobile ? <div>
-                    {otherSkills[1].map((data, index) =>
-                        <SkillDisplay data={data} key={index} />)}
-                </div> : null}
-            </div> : null}
-            <SeeMore onClick={val => toggleMoreSkills(val)} style={styles.seeMore} />
         </section>
     );
 }

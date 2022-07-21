@@ -25,3 +25,5 @@ export const getPinnedProjects = () => get(ref(db, 'projects/pinned')).then(s =>
 export const getAchievements = () => get(ref(db, 'achievements/')).then(s => s.val());
 
 export const obj2arr = obj => Object.entries(obj).sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort).map(([k, v]) => ({ name: k, ...v }));
+
+export const getProject = pid => get(ref(db, `projects/detailed/${pid}`)).then(s => s.val());

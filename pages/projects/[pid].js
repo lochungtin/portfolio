@@ -8,9 +8,13 @@ import Footer from '../components/footer';
 import styles from '../../styles/detail.module.css';
 
 const data = {
-    order: 'r-t0s0f-',
+    order: 't0s0b0h0o2p0e-o2p1e-e-',
     content: {
-
+        t0: 'title',
+        s0: 'subtitle',
+        b0: 'bold text',
+        p0: 'left',
+        p1: 'right',
     }
 };
 
@@ -32,13 +36,9 @@ export default function ProjectDetail() {
     // if (empty)
     //     return <div></div>
 
-    const t = index => <p className={styles.t}>{data.content[index]}</p>
+    const d = (children, type) => <div className={`${styles[type[0]]} ${styles[`m${type[1]}`]}`}>{children}</div>
 
-    const s = index => <p className={styles.s}>{data.content[index]}</p>
-
-    const p = index => <p className={styles.p}>{data.content[index]}</p>
-
-    const b = index => <p className={styles.b}><b>{data.content[index]}</b></p>
+    const p = index => <p className={styles[index[0]]}>{data.content[index]}</p>
 
     const i = index => <Image
         src={data.content[index].href} alt='img'
@@ -49,62 +49,33 @@ export default function ProjectDetail() {
         return <div className={styles.lRoot}></div>
     }
 
-    const d = (children, type) => {
-        let style;
-        switch (type) {
-            case 'o':
-                style = styles.o;
-                break;
-            case 'x':
-                style = styles.x;
-                break;
-            case 'h':
-                style = styles.h;
-                break;
-            default:
-                style = styles.r;
-        }
-
-        return <div className={style}>{children}</div>
-    }
 
     let tStack = new Array();
-    let cStack = new Array();
-    let index = -1;
+    let cStack = new Array([]);
+    let index = 0;
 
     data.order.match(/../g).forEach(expression => {
         switch (expression[0]) {
             // open div handling
-            case 'r':
             case 'o':
             case 'x':
             case 'h':
-                tStack.push(expression[0]);
+                tStack.push(expression);
                 cStack.push([]);
                 index++;
                 break;
 
             // close div handling
             case 'e':
-                cStack[index--].push(d(cStack.pop(), tStack.pop()));
-                break;
-            case 'f':
-                cStack[0].push(<Footer />);
-                cStack[0] = d(cStack[0], 'r');
+                cStack[--index].push(d(cStack.pop(), tStack.pop()));
                 break;
 
             // singleton element handling
             case 't':
-                cStack[index].push(t(expression));
-                break;
             case 's':
-                cStack[index].push(s(expression));
-                break;
             case 'p':
-                cStack[index].push(p(expression));
-                break;
             case 'b':
-                cStack[index].push(b(expression));
+                cStack[index].push(p(expression));
                 break;
             case 'i':
                 cStack[index].push(i(expression));
@@ -116,5 +87,5 @@ export default function ProjectDetail() {
         }
     });
 
-    return cStack[0];
+    return d([d(cStack[0], 'm'), <Footer key={0}/>], 'r');
 }

@@ -2,3 +2,92 @@
     position: relative;
     padding: 0 2rem;
 }
+
+.m {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.t {
+    color: #f7821b;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.s {
+    color: #555555;
+    font-size: 1.5rem;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.h {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.m1 {
+    margin: 0 1rem;
+}
+
+.m2 {
+    margin: 0 2rem;
+}
+
+.m3 {
+    margin: 0 4rem;
+}
+
+.m4 {
+    margin: 1rem 0;
+}
+
+.m5 {
+    margin: 1rem;
+}
+
+.m6 {
+    margin: 1rem 2rem;
+}
+
+.m7 {
+    margin: 1rem 4rem;
+}
+
+.m8 {
+    margin: 2rem 0;
+}
+
+.m9 {
+    margin: 2rem 1rem;
+}
+
+.mA {
+    margin: 2rem
+}
+
+.mB {
+    margin: 2rem 4rem;
+}
+
+.mC {
+    margin: 4rem 0;
+}
+
+.mD {
+    margin: 4rem 1rem;
+}
+
+.mE {
+    margin: 4rem 2rem;
+}
+
+.mF {
+    margin: 4rem;
+}

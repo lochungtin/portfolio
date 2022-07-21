@@ -7,7 +7,7 @@ import SeeMore from '../../components/seemore';
 import useMediaQuery from '../../utils/media';
 import SkillDisplay from '../skills/skilldisplay';
 
-import commonStyles from '../../../styles/common.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './skills.module.css';
 
@@ -34,7 +34,7 @@ export default function Skills({ main, other }) {
             <p className={`${textStyles.sectionTitle} ${textStyles.orange} ${styles.skillTitle}`}>
                 <b>My Skills</b>
             </p>
-            <div className={commonStyles.row}>
+            <div className={layoutStyles.row}>
                 {mainSkills.map((data, index) =>
                     <Card style={styles.mainSkillCell} key={index}>
                         <Image
@@ -45,7 +45,7 @@ export default function Skills({ main, other }) {
                         <p className={styles.skillText}><code>{data.subtext}</code></p>
                     </Card>)}
             </div>
-            {moreSkills ? <div className={`${commonStyles.row} ${styles.skillRow}`}>
+            {moreSkills ? <div className={`${layoutStyles.row} ${styles.skillRow}`}>
                 <div>
                     {otherSkills[0].map((data, index) =>
                         <SkillDisplay data={data} key={index} />)}

@@ -2,7 +2,7 @@ import { obj2arr } from '../../api/firebase';
 import ReadMore from '../../components/readmore';
 import useMediaQuery from '../../utils/media';
 
-import commonStyles from '../../../styles/common.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './achievements.module.css';
 
@@ -21,8 +21,8 @@ export default function Achievements({ data }) {
                 <b>{isMobile ? 'Achievements' : 'Other Achievements'}</b>
             </p>
             {sorted.map((data, index) =>
-                <div className={len === index ? styles.lastBox : commonStyles.itemDetailBox} key={index}>
-                    <div className={commonStyles.horizontalParagraphs}>
+                <div className={len === index ? styles.lastBox : layoutStyles.itemDetailBox} key={index}>
+                    <div className={layoutStyles.horizontalParagraphs}>
                         <p className={textStyles.itemDetailTitle}>
                             <b>{data.name}</b>
                         </p>

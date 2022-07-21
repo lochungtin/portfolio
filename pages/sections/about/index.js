@@ -1,14 +1,14 @@
 import Card from '../../components/card';
 import Codebox from './codebox';
 
-import commonStyles from '../../../styles/common.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './about.module.css';
 
 export default function About() {
     return (
         <section id='about'>
-            <div className={`${commonStyles.row} ${styles.topRow}`}>
+            <div className={`${layoutStyles.row} ${styles.topRow}`}>
                 <div className={styles.titleContainer}>
                     <p className={styles.welcome}>Hi there! I am</p>
                     <p className={`${styles.title} ${textStyles.orange}`}><b>Timothy Lo</b></p>
@@ -16,7 +16,7 @@ export default function About() {
                 </div>
                 <Codebox />
             </div>
-            <div className={`${commonStyles.row} ${styles.aboutRow}`}>
+            <div className={`${layoutStyles.row} ${styles.aboutRow}`}>
                 <Card style={styles.aboutCell}>
                     <p className={`${styles.title} ${textStyles.orange}`}><b>AI and ML</b></p>
                     <p>I have taken a handful of online courses about both supervised and reinforcement learning and have taught myself to use popular ML frameworks such as <code>TensorFlow</code> and <code>PyTorch</code>.</p>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { obj2arr } from '../../api/firebase';
 import BinarySelector from '../../components/binaryselector';
 
-import commonStyles from '../../../styles/common.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './education.module.css';
 
@@ -25,8 +25,8 @@ export default function Education({ online, formal }) {
                 style={styles.selector}
             />
             {obj2arr(selection ? formal : online).map((data, index) =>
-                <div className={commonStyles.itemDetailBox} key={index}>
-                    <div className={commonStyles.horizontalParagraphs}>
+                <div className={layoutStyles.itemDetailBox} key={index}>
+                    <div className={layoutStyles.horizontalParagraphs}>
                         <p className={styles.titleContainer}>
                             <span className={textStyles.itemDetailTitle}>
                                 <b>{data.name}</b>

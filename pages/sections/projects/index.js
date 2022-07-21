@@ -3,7 +3,7 @@ import ReadMore from '../../components/readmore';
 import useMediaQuery from '../../utils/media';
 import ProjectBlock from './projectblock';
 
-import commonStyles from '../../../styles/common.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 import textStyles from '../../../styles/text.module.css';
 import styles from './projects.module.css';
 
@@ -24,7 +24,7 @@ export default function Projects({ pinned }) {
             <p className={`${textStyles.sectionTitle} ${textStyles.orange}`}>
                 <b>Projects</b>
             </p>
-            <div className={`${commonStyles.row} ${styles.projectRow}`}>
+            <div className={`${layoutStyles.row} ${styles.projectRow}`}>
                 <div>
                     {projects[0].map((data, index) =>
                         <ProjectBlock data={data} key={index} />)}

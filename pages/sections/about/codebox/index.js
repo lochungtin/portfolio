@@ -14,20 +14,18 @@ export default function Codebox() {
     }, []);
 
     return (
-        <Card>
-            <div className={styles.root}>
-                <pre className={styles.text}>
-                    <code>const</code>{` person = {\n    `}
-                    <span>name</span>{`: "Timothy Lo",\n    `}
-                    <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}
-                    <span>location</span>{`: "London",\n    `}
-                    <span>abilities</span>{`: [\n\t`}
-                    {`"Machine Learning"\n\t`}
-                    {`"Full Stack Dev"\n\t`}
-                    {`"Mobile Dev",\n    `}
-                    {`],\n};`}
-                </pre>
-            </div>
+        <Card style={styles.root}>
+            <pre className={styles.text}>
+                <code>const</code>{` person = {\n    `}
+                <span>name</span>{`: "Timothy Lo",\n    `}
+                <span>age</span>{`: `}<code>{`${age}`}</code>{`,\n    `}
+                <span>location</span>{`: "London",\n    `}
+                <span>abilities</span>{`: [\n\t`}
+                {`"Machine Learning"\n\t`}
+                {`"Full Stack Dev"\n\t`}
+                {`"Mobile Dev",\n    `}
+                {`],\n};`}
+            </pre>
         </Card>
     );
 }

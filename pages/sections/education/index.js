@@ -22,6 +22,7 @@ export default function Education({ online, formal }) {
                 selection={selection}
                 val0='Online Courses' val1='Formal Education'
                 onClick={() => setSelection((selection + 1) % 2)}
+                style={styles.selector}
             />
             {obj2arr(selection ? formal : online).map((data, index) =>
                 <div className={commonStyles.itemDetailBox} key={index}>

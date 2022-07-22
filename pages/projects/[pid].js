@@ -8,13 +8,19 @@ import Footer from '../components/footer';
 import styles from '../../styles/detail.module.css';
 
 const data = {
-    order: 't0s0b0h0o2p0e-o2p1e-e-',
+    order: 't0s0b0h0o2p0e-o2p1e-e-l0',
     content: {
         t0: 'title',
         s0: 'subtitle',
         b0: 'bold text',
         p0: 'left',
         p1: 'right',
+        l0: {
+            '0': 'item0',
+            '1': 'item1',
+            '2': 'item2',
+            '3': 'item3',
+        },
     }
 };
 
@@ -36,17 +42,35 @@ export default function ProjectDetail() {
     // if (empty)
     //     return <div></div>
 
-    const d = (children, type) => <div className={`${styles[type[0]]} ${styles[`m${type[1]}`]}`}>{children}</div>
+    const d = (children, type) => {
+        return <div className={`${styles[type[0]]} ${styles[`m${type[1]}`]}`}>
+            {children}
+        </div>;
+    }
 
-    const p = index => <p className={styles[index[0]]}>{data.content[index]}</p>
+    const p = index => {
+        return <p className={styles[index[0]]}>
+            {data.content[index]}
+        </p>
+    }
 
-    const i = index => <Image
-        src={data.content[index].href} alt='img'
-        width={data.content[index].width} height={data.content[index].height}
-    />
+    const i = index => {
+        return <Image
+            src={data.content[index].href} alt='img'
+            width={data.content[index].width} height={data.content[index].height}
+        />;
+    }
 
     const l = index => {
-        return <div className={styles.lRoot}></div>
+        return <div className={styles.lRoot}>
+            {Object.entries(data.content[index]).map(([key, text]) =>
+                <div className={styles.lRow} key={key}>
+                    <div className={styles.lDot}></div>
+                    <p className={styles.l}>
+                        {text}
+                    </p>
+                </div>)}
+        </div>
     }
 
 
@@ -80,12 +104,14 @@ export default function ProjectDetail() {
             case 'i':
                 cStack[index].push(i(expression));
                 break;
-            
+            case 'l':
+                cStack[index].push(l(expression));
+
             // unknown fragment handling
             default:
                 cStack[index].push(<></>);
         }
     });
 
-    return d([d(cStack[0], 'm'), <Footer key={0}/>], 'r');
+    return d([d(cStack[0], 'm'), <Footer key={0} />], 'r');
 }

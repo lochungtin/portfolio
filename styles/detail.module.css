@@ -35,6 +35,25 @@
     justify-content: center;
 }
 
+.lRow {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lDot {
+    background-color: #f7821b;
+    border-radius: 0.2rem;
+    height: 0.4rem;
+    margin-right: 1rem;
+    width: 0.4rem;
+}
+
+.l {
+    line-height: 0;
+}
+
 .m1 {
     margin: 0 1rem;
 }

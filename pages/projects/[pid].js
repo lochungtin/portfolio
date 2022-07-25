@@ -106,6 +106,7 @@ export default function ProjectDetail() {
                 break;
             case 'l':
                 cStack[index].push(l(expression));
+                break;
 
             // unknown fragment handling
             default:

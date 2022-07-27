@@ -11,7 +11,7 @@ import ReadMore from '../components/readmore';
 import styles from '../../styles/detail.module.css';
 
 const data = {
-    order: 'n0 a0 t0 h8 i0 q3 q0 s0 p0 e- q0 s1 p1 e- q0 s2 p2 e- e- e- h4 x1 b0 p3 i1 e- x1 b1 p4 i2 e- x1 b2 p5 i3 e- e- h3 q1 s3 p6 l0 e- q1 s4 p7 e- e- t1 h4 y1 o4 s5 e- j0 g1 r0 e- e- y1 o4 s6 e- j0 g2 r1 e- e- e- t2 p8',
+    order: 'n0 a0 j0 g0 r0 e- t0 h8 i0 q3 q0 s0 p0 e- q0 s1 p1 e- q0 s2 p2 e- e- e- h4 x1 b0 p3 i1 e- x1 b1 p4 i2 e- x1 b2 p5 i3 e- e- h3 q1 s3 p6 l0 e- q1 s4 p7 e- e- t1 h4 y1 o4 s5 e- j0 g1 r1 e- e- y1 o4 s6 e- j0 g2 r2 e- e- e- t2 p8',
     content: {
         n0: 'CoinControl',
         t0: 'Features',
@@ -64,7 +64,6 @@ const data = {
         },
         g0: {
             href: '/lochungtin/CoinControl',
-            size: 40
         },
         g1: {
             href: '/issacto'
@@ -73,10 +72,14 @@ const data = {
             href: '/kenchi-huang'
         },
         r0: {
+            href: 'https://github.com/lochungtin/CoinControl/releases/download/v.2.0.0/CoinControl-V2.0.0.apk',
+            text: 'Download APK',
+        },
+        r1: {
             href: 'https://issacto.com/',
             text: 'Website',
         },
-        r1: {
+        r2: {
             href: 'https://kenchihuang.co.uk/',
             text: 'Website',
         },

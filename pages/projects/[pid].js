@@ -94,15 +94,7 @@ export default function ProjectDetail() {
                 break;
 
             // singleton element handling
-            case 'n':
-                cStack[index].push((
-                    <Head>
-                        <title>{data.content.n0}</title>
-                        <link rel="icon" href='/logo/favicon.ico' />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                    </Head>
-                ));
-            case 't': case 's': case 'a': case 'p': case 'b':
+            case 'n': case 't': case 's': case 'a': case 'p': case 'b':
                 cStack[index].push(p(expression));
                 break;
             case 'i':
@@ -124,5 +116,14 @@ export default function ProjectDetail() {
         }
     });
 
-    return d([<Header key='' />, d(cStack[0], 'm'), <Footer key='' />], 'r');
+    return d([
+        <Header key='' />,
+        <Head key=''>
+            <title>{data.content.n0}</title>
+            <link rel="icon" href='/logo/favicon.ico' />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        </Head>,
+        d(cStack[0], 'm'),
+        <Footer key='' />
+    ], 'r');
 }

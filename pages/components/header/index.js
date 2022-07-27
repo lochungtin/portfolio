@@ -23,12 +23,12 @@ export default function Header() {
                     <Image src='/logo/logo_full_c.svg' height={50} width={200} alt='logo' />
                 </Link>
             </div> : null}
-            <Link href='#about'>
+            <Link href='/#about'>
                 <a className={`${styles.headerLink} ${showItems ? '' : styles.hidden}`}>
                     {showItems ? 'ABOUT' : ''}
                 </a>
             </Link>
-            <Link href='#education'>
+            <Link href='/#education'>
                 <a className={`${styles.headerLink} ${showItems ? '' : styles.hidden}`}>
                     {showItems ? 'EDUCATION' : ''}
                 </a>
@@ -36,12 +36,12 @@ export default function Header() {
             {!isMobile ? <Link href='/'>
                 <Image src='/logo/logo_full_c.svg' height={50} width={200} alt='logo' />
             </Link> : null}
-            <Link href='#projects'>
+            <Link href='/projects'>
                 <a className={`${styles.headerLink} ${showItems ? '' : styles.hidden}`}>
                     {showItems ? 'PROJECTS' : ''}
                 </a>
             </Link>
-            <Link href='#achievements'>
+            <Link href='/#achievements'>
                 <a className={`${styles.headerLink} ${showItems ? '' : styles.hidden}`}>
                     {showItems ? 'ACHIEVEMENTS' : ''}
                 </a>

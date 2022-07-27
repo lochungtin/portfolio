@@ -1,59 +1,3 @@
-.r {
-    position: relative;
-    padding: 0 2rem;
-}
-
-.m {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.t {
-    color: #f7821b;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.s {
-    color: #555555;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-}
-
-.b {
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.h {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.lRow {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.lDot {
-    background-color: #f7821b;
-    border-radius: 0.2rem;
-    height: 0.4rem;
-    margin-right: 0.8rem;
-    width: 0.4rem;
-}
-
-.l {
-    line-height: 0;
-}
-
 .m1 {
     margin: 0 1rem;
 }
@@ -91,7 +35,7 @@
 }
 
 .mA {
-    margin: 2rem
+    margin: 2rem;
 }
 
 .mB {
@@ -112,4 +56,133 @@
 
 .mF {
     margin: 4rem;
+}
+
+
+.r {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.m {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.n {
+    color: #f7821b;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.t {
+    /* color: #f7821b; */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.s {
+    color: #555555;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.a {
+    font-size: 1.2rem;
+    margin-bottom: 0; 
+}
+
+.b {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.o {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.x {
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.h {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lRow {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lDot {
+    background-color: #f7821b;
+    border-radius: 0.2rem;
+    height: 0.4rem;
+    margin-right: 0.8rem;
+    width: 0.4rem;
+}
+
+.l {
+    line-height: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .h {
+        flex-direction: column;
+    }
+
+    .o {
+        margin-top: 1rem;
+        width: 90vw;
+    }
+
+    .x {
+        margin-top: 1rem;
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .t {
+        max-width: 60rem;
+    }
+
+    .s {
+        width: 50rem;
+    }
+
+    .a {
+        max-width: 50rem;
+    }
+
+    .p {
+        max-width: 45rem;
+    }
+
+    .o {
+        width: 17rem;
+    }
+
+    .x {
+        width: 17rem;
+    }
 }

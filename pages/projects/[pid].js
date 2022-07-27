@@ -6,20 +6,45 @@ import { getProject } from '../api/firebase';
 import Footer from '../components/footer';
 
 import styles from '../../styles/detail.module.css';
+import Head from 'next/head';
 
 const data = {
-    order: 't0s0b0h0o2p0e-o2p1e-e-l0',
+    order: 'n0 a0 t0 s0 p0 s1 p1 s2 p2 h4 x1 b0 p3 e- x1 b1 p4 l0 e- x1 b2 p5 e- e- s3 p6 l1 s4 p7 t1 p8',
     content: {
-        t0: 'title',
-        s0: 'subtitle',
-        b0: 'bold text',
-        p0: 'left',
-        p1: 'right',
+        n0: 'CoinControl',
+        t0: 'Features',
+        t1: 'Future Plans',
+        s0: 'Records',
+        s1: 'Account System',
+        s2: 'Customisation',
+        b0: 'Custom Themes',
+        b1: 'Currency Labels',
+        b2: 'Categories',
+        s3: 'Data Management',
+        s4: 'Notifications',
+        a0: `CoinControl is a mobile money management application with an account system, cloud storage/backups, record analytics, and also a built-in calculator as the input number pad for recording expenses and incomes.`,
+        p0: `Records are classified by category, which can have custom icons, colour, and names. Custom categories can be added by users, existing categories can also be customised to the user's liking.`,
+        p1: `Accounts can be set up in the app, which can be used to store data on the cloud store. Though the app itself can be used without an account. Account authentication is managed by Firebase Authentication.`,
+        p2: `The app provides a wide range of customisability. Which includes customs themes, categories, and currency labels.`,
+        p3: `With a custom colour picker, users can choose from 30 different flat design colours and customise their app's accent. Light mode is also a togglable option in the settings.`,
+        p4: `Users can select their currency label for their spending records, which include:`,
+        p5: `Users can select from various icons to create their own custom categories to label their spendings and incomes. Each category is stylable with the 30 custom colours provided by the colour picker.`,
+        p6: `Data is stored both locally and on the cloud via Firebase's Realtime Database System. Data syncing can be done with a press of a button. Syncing methods include`,
+        p7: `Notifications can be set to remind users to record and update their expenses daily. While the notification's default firing time is at 11:00PM local time, they can be customised to fit the user's personal schedule.`,
+        p8: `Some next steps I have in mind are creating a web application for CoinControl, so data can be accessed and updated on the computer as well, which will improve accessibility and ease of use.`,
         l0: {
-            '0': 'item0',
-            '1': 'item1',
-            '2': 'item2',
-            '3': 'item3',
+            '0': 'USD',
+            '1': 'GBP',
+            '2': 'EUR',
+            '3': 'HKD',
+            '4': 'NTD',
+            '5': 'JPY',
+            '6': 'KRW',
+        },
+        l1: {
+            '0': 'Select Latest (default option)',
+            '1': 'Cloud Overwrite Local',
+            '2': 'Local OVerwrite Cloud',
         },
     }
 };
@@ -43,7 +68,7 @@ export default function ProjectDetail() {
     //     return <div></div>
 
     const d = (children, type) => {
-        return <div className={`${styles[type[0]]} ${styles[`m${type[1]}`]}`}>
+        return <div className={`${styles[`m${type[1]}`]} ${styles[type[0]]}`}>
             {children}
         </div>;
     }
@@ -78,7 +103,7 @@ export default function ProjectDetail() {
     let cStack = new Array([]);
     let index = 0;
 
-    data.order.match(/../g).forEach(expression => {
+    data.order.replace(/ /g, '').match(/../g).forEach(expression => {
         switch (expression[0]) {
             // open div handling
             case 'o':
@@ -95,8 +120,17 @@ export default function ProjectDetail() {
                 break;
 
             // singleton element handling
+            case 'n':
+                cStack[index].push((
+                    <Head>
+                        <title>{data.content.n0}</title>
+                        <link rel="icon" href='/logo/favicon.ico' />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                    </Head>
+                ));
             case 't':
             case 's':
+            case 'a':
             case 'p':
             case 'b':
                 cStack[index].push(p(expression));

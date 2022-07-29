@@ -155,6 +155,10 @@
     justify-content: center;
 }
 
+.lRoot {
+    margin-top: 0.5rem;
+}
+
 .lRow {
     align-items: center;
     display: flex;

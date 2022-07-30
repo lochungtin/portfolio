@@ -10,6 +10,13 @@ import ReadMore from '../components/readmore';
 
 import styles from '../../styles/detail.module.css';
 
+// const data = {
+//     "order": "n0",
+//     "content": {
+//         "n0": "",
+//     }
+// }
+
 export default function ProjectDetail() {
     const [data, setData] = useState({});
     const [empty, setEmpty] = useState(true);
@@ -117,12 +124,12 @@ export default function ProjectDetail() {
     });
 
     return d([
-        <Header key='' />,
         <Head key=''>
             <title>{data.content.n0}</title>
             <link rel="icon" href='/logo/favicon.ico' />
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>,
+        <Header key='' />,
         d(cStack[0], 'm'),
         <Footer key='' />
     ], 'r');

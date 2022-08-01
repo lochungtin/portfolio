@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
-
-import text from '../../styles/text.module.css';
-import layout from '../../styles/layout.module.css';
-import styles from '../../styles/home.module.css';
 import useMediaQuery from '../utils/media';
+
+import styles from '../../styles/home.module.css';
+import layout from '../../styles/layout.module.css';
+import text from '../../styles/text.module.css';
 
 export default function Projects() {
 	const [textFilter, setTextFilter] = useState('');
@@ -27,8 +27,8 @@ export default function Projects() {
 		<div className={styles.container}>
 			<Head>
 				<title>My Projects</title>
-				<link rel="icon" href="/logo/favicon.ico" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+				<link rel='icon' href='/logo/favicon.ico' />
+				<meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
 			</Head>
 
 			<Header />
@@ -37,18 +37,18 @@ export default function Projects() {
 					<div className={styles.searchRoot}>
 						<input
 							className={styles.searchInput}
-							type="text"
-							placeholder="Search Filter ..."
+							type='text'
+							placeholder='Search Filter ...'
 							value={textFilter}
 							onChange={handleTextChange}
 						/>
 						<button onClick={clearSearch}>
-							<Image src="/icons/cancel.svg" alt="cancel" width={25} height={25} />
+							<Image src='/icons/cancel.svg' alt='cancel' width={25} height={25} />
 						</button>
 					</div>
 					{isMobile ? (
 						<button onClick={toggleExpanded}>
-							<Image src="/icons/filter.svg" alt="filter" width={35} height={35} />
+							<Image src='/icons/filter.svg' alt='filter' width={35} height={35} />
 						</button>
 					) : null}
 				</div>

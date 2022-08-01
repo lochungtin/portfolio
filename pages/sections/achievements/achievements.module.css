@@ -1,21 +1,21 @@
 .lastBox {
-    border: none;
-    padding: 2rem;
+	border: none;
+	padding: 2rem;
 }
 
 .readMore {
-    float: right;
-    margin-top: 1rem;
+	float: right;
+	margin-top: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
-    .lastBox {
-        width: 90vw;
-    }
+	.lastBox {
+		width: 90vw;
+	}
 }
 
 @media only screen and (min-width: 769px) {
-    .lastBox {
-        width: 40rem;
-    }
+	.lastBox {
+		width: 40rem;
+	}
 }

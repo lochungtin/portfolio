@@ -2,7 +2,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import { getAchievements, getFormalEducation, getMainSkills, getOnlineEducation, getOtherSkills, getPinnedProjects } from './api/firebase';
+import {
+	getAchievements,
+	getFormalEducation,
+	getMainSkills,
+	getOnlineEducation,
+	getOtherSkills,
+	getPinnedProjects,
+} from './api/firebase';
 import Footer from './components/footer';
 import Header from './components/header';
 import About from './sections/about';
@@ -30,32 +37,32 @@ export default function Home() {
 
 	useEffect(() => {
 		if (!r0)
-			getMainSkills().then(data => {
+			getMainSkills().then((data) => {
 				setD0(data);
 				setR0(true);
 			});
 		if (!r1)
-			getOtherSkills().then(data => {
+			getOtherSkills().then((data) => {
 				setD1(data);
 				setR1(true);
 			});
 		if (!r2)
-			getOnlineEducation().then(data => {
+			getOnlineEducation().then((data) => {
 				setD2(data);
 				setR2(true);
 			});
 		if (!r3)
-			getFormalEducation().then(data => {
+			getFormalEducation().then((data) => {
 				setD3(data);
 				setR3(true);
 			});
 		if (!r4)
-			getPinnedProjects().then(data => {
+			getPinnedProjects().then((data) => {
 				setD4(data);
 				setR4(true);
 			});
 		if (!r5)
-			getAchievements().then(data => {
+			getAchievements().then((data) => {
 				setD5(data);
 				setR5(true);
 			});
@@ -67,8 +74,8 @@ export default function Home() {
 			<div className={styles.container}>
 				<Head>
 					<title>Timothy Lo</title>
-					<link rel="icon" href='/logo/favicon.ico' />
-					<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+					<link rel='icon' href='/logo/favicon.ico' />
+					<meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
 				</Head>
 
 				<Header />

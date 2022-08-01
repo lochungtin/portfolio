@@ -1,49 +1,49 @@
 .welcome {
-    font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .title {
-    font-size: 2.5rem;
-    line-height: 0;
+	font-size: 2.5rem;
+	line-height: 0;
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    text-align: start;
+	font-size: 1.5rem;
+	text-align: start;
 }
 
 .aboutCell {
-    padding: 2rem;
+	padding: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
-    .titleContainer {
-        padding-left: 1rem;
-    }
+	.titleContainer {
+		padding-left: 1rem;
+	}
 
-    .aboutCell{
-        margin-top: 2rem;
-        width: 90vw;
-    }
+	.aboutCell {
+		margin-top: 2rem;
+		width: 90vw;
+	}
 }
 
 @media only screen and (min-width: 769px) {
-    .topRow {
-        margin-top: 4rem;
-    }
+	.topRow {
+		margin-top: 4rem;
+	}
 
-    .titleContainer {
-        margin-right: 4rem;
-    }
+	.titleContainer {
+		margin-right: 4rem;
+	}
 
-    .aboutRow {
-        height: 25rem;
-        margin-top: 4rem;
-    }
+	.aboutRow {
+		height: 25rem;
+		margin-top: 4rem;
+	}
 
-    .aboutCell {
-        height: inherit;
-        margin: 0 1rem;
-        width: 25rem;
-    }
+	.aboutCell {
+		height: inherit;
+		margin: 0 1rem;
+		width: 25rem;
+	}
 }

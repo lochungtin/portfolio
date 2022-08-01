@@ -15,7 +15,7 @@ export default function Projects() {
 	const [expanded, setExpanded] = useState(false);
 	const isMobile = useMediaQuery();
 
-	const showFilter = isMobile && expanded;
+	const showFilter = isMobile === expanded;
 
 	const clearSearch = () => setTextFilter('');
 
@@ -52,15 +52,42 @@ export default function Projects() {
 						</button>
 					) : null}
 				</div>
-				{showFilter ? <div></div> : null}
-				<div className={layout.itemDetailBox}>
-					<p className={text.itemDetailTitle}>Some Project Name</p>
-				</div>
-				<div className={layout.itemDetailBox}>
-					<p className={text.itemDetailTitle}>Some Project Name</p>
-				</div>
-				<div className={layout.itemDetailBox}>
-					<p className={text.itemDetailTitle}>Some Project Name</p>
+				<div className={styles.horizontalSplit}>
+					{showFilter ? (
+						<div className={styles.tagList}>
+							<label className={styles.checkmarkContainer}>
+								One
+								<input type='checkbox' name='death' />
+								<span className={styles.checkmark}></span>
+							</label>
+							<label className={styles.checkmarkContainer}>
+								One
+								<input type='checkbox' name='death' />
+								<span className={styles.checkmark}></span>
+							</label>
+							<label className={styles.checkmarkContainer}>
+								One
+								<input type='checkbox' name='death' />
+								<span className={styles.checkmark}></span>
+							</label>
+							<label className={styles.checkmarkContainer}>
+								One
+								<input type='checkbox' name='death' />
+								<span className={styles.checkmark}></span>
+							</label>
+						</div>
+					) : null}
+					<div className={styles.projectList}>
+						<div className={layout.itemDetailBox}>
+							<p className={text.itemDetailTitle}>Some Project Name</p>
+						</div>
+						<div className={layout.itemDetailBox}>
+							<p className={text.itemDetailTitle}>Some Project Name</p>
+						</div>
+						<div className={layout.itemDetailBox}>
+							<p className={text.itemDetailTitle}>Some Project Name</p>
+						</div>
+					</div>
 				</div>
 			</main>
 			<Footer />

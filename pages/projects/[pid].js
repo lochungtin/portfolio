@@ -10,13 +10,6 @@ import ReadMore from '../components/readmore';
 
 import styles from '../../styles/detail.module.css';
 
-// const data = {
-//     "order": "n0",
-//     "content": {
-//         "n0": "",
-//     }
-// }
-
 export default function ProjectDetail() {
 	const [data, setData] = useState({});
 	const [empty, setEmpty] = useState(true);

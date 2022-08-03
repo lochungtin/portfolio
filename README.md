@@ -60,20 +60,20 @@ A tag is composed of 2 characters. The **first character** determines the type o
 
 The parsing algorithm uses stacks to progressively generate content while reading the tags one by one.
 
-```
+```python
 tStack = []
 eStack = []
 for each tag t
- if t.type == 0
-  eStack.top().append(createElement(t))
- if t.type == 1
-  eStack.push(new Array())
-  tStack.push(t)
- if t.type == 2
-  div = createDiv(eStack.pop(), tStack.pop())
-  eStack.top().append(div)
- if t.type == 3
-  eStack.top().append(createButton(t))
+    if t.type == 0
+        eStack.top().append(createElement(t))
+    if t.type == 1
+        eStack.push(new Array())
+        tStack.push(t)
+    if t.type == 2
+        div = createDiv(eStack.pop(), tStack.pop())
+        eStack.top().append(div)
+    if t.type == 3
+        eStack.top().append(createButton(t))
 
 root = createDiv(eStack.pop(), 'root')
 ```

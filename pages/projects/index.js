@@ -82,6 +82,12 @@ function DisplayHandling({ tags, projects }) {
 			return false;
 		});
 
+	if (textFilter)
+		filtered = filtered.filter(
+			(project) =>
+				project.desc.toLowerCase().includes(textFilter) || project.name.toLowerCase().includes(textFilter),
+		);
+
 	return (
 		<div className={styles.container}>
 			<Head>

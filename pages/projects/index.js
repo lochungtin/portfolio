@@ -9,6 +9,7 @@ import useMediaQuery from '../utils/media';
 import styles from '../../styles/home.module.css';
 import layout from '../../styles/layout.module.css';
 import text from '../../styles/text.module.css';
+import FilterTag from './filtertag';
 
 const tags = {
 	0: 'Web Apps',
@@ -78,16 +79,13 @@ export default function Projects() {
 					{showFilter ? (
 						<div className={styles.tagList}>
 							{Object.entries(tags).map(([key, tag], index) => (
-								<label
-									className={styles.checkmarkContainer}
+								<FilterTag
 									key={index}
-									onChange={() => handleLabelToggle(key)}>
-									<div className={styles.tagFilterTag}>
-										<p className={styles.filterTagText}>{tag}</p>
-									</div>
-									<input type='checkbox' checked={tagFilter[key]} />
-									<span className={styles.checkmark}></span>
-								</label>
+									tag={tag}
+									tagKey={key}
+									checked={tagFilter[key]}
+									handleToggle={handleLabelToggle}
+								/>
 							))}
 						</div>
 					) : null}

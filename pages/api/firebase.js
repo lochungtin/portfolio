@@ -39,11 +39,15 @@ export const getPinnedProjects = async () => {
 	return Object.entries(pinnedRefData).map(([key, data], index) => ({ ...data, ...details[index], name: key }));
 };
 
+export const getProject = (pid) => get(ref(db, `projects/detailed/${pid}`)).then((s) => s.val());
+
+export const getFilterTags = () => get(ref(db, 'projects/tags')).then((s) => s.val());
+
+export const getAllProjects = () => get(ref(db, 'projects/summary')).then((s) => s.val());
+
 export const getAchievements = () => get(ref(db, 'achievements/')).then((s) => s.val());
 
 export const obj2arr = (obj) =>
 	Object.entries(obj)
 		.sort(([aK, aV], [bK, bV]) => aV.sort - bV.sort)
 		.map(([k, v]) => ({ name: k, ...v }));
-
-export const getProject = (pid) => get(ref(db, `projects/detailed/${pid}`)).then((s) => s.val());

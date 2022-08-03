@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
+import { getAllProjects, getFilterTags } from '../api/firebase';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import useMediaQuery from '../utils/media';
@@ -11,19 +12,30 @@ import styles from '../../styles/home.module.css';
 import layout from '../../styles/layout.module.css';
 import text from '../../styles/text.module.css';
 
-const tags = {
-	0: 'Web Apps',
-	1: 'Mobile Apps',
-	2: 'Full Stack',
-	3: 'Microcontrollers',
-	4: 'AI and ML',
-	5: 'Algorithms',
-	6: 'Packages',
-};
-
-const data = {};
-
 export default function Projects() {
+	const [r0, setR0] = useState(false);
+	const [r1, setR1] = useState(false);
+
+	const [d0, setD0] = useState({});
+	const [d1, setD1] = useState({});
+
+	useEffect(() => {
+		if (!r0)
+			getFilterTags().then((data) => {
+				setD0(data);
+				setR0(true);
+			});
+		if (!r1)
+			getAllProjects().then((data) => {
+				setD1(data);
+				setR1(true);
+			});
+	});
+
+	return <DisplayHandling tags={d0} projects={d1} />;
+}
+
+function DisplayHandling({ tags, projects }) {
 	const emptyTagFilter = {};
 	Object.keys(tags).forEach((key) => {
 		emptyTagFilter[key] = false;
@@ -105,14 +117,16 @@ export default function Projects() {
 						</div>
 					) : null}
 					<div className={styles.projectList}>
-						<div className={`${layout.itemDetailBox} ${styles.projectDetailBox}`}>
-							<div>
-								<p className={text.itemDetailTitle}>Some Project Name</p>
-								<p>Some Text</p>
-								<div className={styles.projectTagList}></div>
+						{Object.entries(projects).map(([key, project], index) => (
+							<div className={`${layout.itemDetailBox} ${styles.projectDetailBox}`} key={index}>
+								<div>
+									<p className={text.itemDetailTitle}>{key}</p>
+									<p>{project.desc}</p>
+									<div className={styles.projectTagList}></div>
+								</div>
+								<div className={styles.projectLangList}></div>
 							</div>
-							<div className={styles.projectLangList}></div>
-						</div>
+						))}
 					</div>
 				</div>
 			</main>

@@ -38,6 +38,20 @@
 	outline: none;
 }
 
+.clearBtn {
+	height: 2.5rem;
+	width: 2.5rem;
+	margin: 1rem 0rem;
+}
+
+.tagList {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
 	.filterRoot {
 		align-items: center;
@@ -56,11 +70,6 @@
 	}
 
 	.tagList {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-top: 1rem;
 		width: 90vw;
 	}
 }
@@ -82,11 +91,6 @@
 	}
 
 	.tagList {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-top: 1rem;
 		margin-right: 2rem;
 		width: 12rem;
 	}

@@ -5,29 +5,32 @@ import { useState } from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import useMediaQuery from '../utils/media';
+import FilterTag from './filtertag';
 
 import styles from '../../styles/home.module.css';
 import layout from '../../styles/layout.module.css';
 import text from '../../styles/text.module.css';
-import FilterTag from './filtertag';
 
 const tags = {
 	0: 'Web Apps',
-	1: 'AI and ML',
-	2: 'Algorithms',
+	1: 'Mobile Apps',
+	2: 'Full Stack',
 	3: 'Microcontrollers',
+	4: 'AI and ML',
+	5: 'Algorithms',
+	6: 'Packages',
 };
-
-let filter = {};
-Object.keys(tags).forEach((key) => {
-	filter[key] = false;
-});
 
 const data = {};
 
 export default function Projects() {
+	const emptyTagFilter = {};
+	Object.keys(tags).forEach((key) => {
+		emptyTagFilter[key] = false;
+	});
+
 	const [textFilter, setTextFilter] = useState('');
-	const [tagFilter, setTagFilter] = useState(filter);
+	const [tagFilter, setTagFilter] = useState(emptyTagFilter);
 	const [expanded, setExpanded] = useState(false);
 	const isMobile = useMediaQuery();
 
@@ -66,7 +69,9 @@ export default function Projects() {
 							onChange={handleTextChange}
 						/>
 						<button onClick={clearSearch}>
-							<Image src='/icons/cancel.svg' alt='cancel' width={25} height={25} />
+							<div className={styles.clearBtn}>
+								<Image src='/icons/cancel.svg' alt='cancel' width={25} height={25} />
+							</div>
 						</button>
 					</div>
 					{isMobile ? (
@@ -87,6 +92,11 @@ export default function Projects() {
 									handleToggle={handleLabelToggle}
 								/>
 							))}
+							<FilterTag
+								tag='Clear Filters'
+								checked={false}
+								handleToggle={() => setTagFilter(emptyTagFilter)}
+							/>
 						</div>
 					) : null}
 					<div className={styles.projectList}>

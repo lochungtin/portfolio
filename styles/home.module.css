@@ -145,4 +145,8 @@
 		margin-right: 2rem;
 		width: 12rem;
 	}
+
+	.projectList {
+		width: 40rem;
+	}
 }

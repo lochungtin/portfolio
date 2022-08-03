@@ -118,13 +118,23 @@ function DisplayHandling({ tags, projects }) {
 					) : null}
 					<div className={styles.projectList}>
 						{Object.entries(projects).map(([key, project], index) => (
-							<div className={`${layout.itemDetailBox} ${styles.projectDetailBox}`} key={index}>
-								<div>
-									<p className={text.itemDetailTitle}>{key}</p>
-									<p>{project.desc}</p>
-									<div className={styles.projectTagList}></div>
+							<div className={layout.itemDetailBox} key={index}>
+								<p className={text.itemDetailTitle}>{key}</p>
+								<p>{project.desc}</p>
+								<div className={styles.projectTagList}>
+									{Object.keys(project.tags).map((tagKey, index) => (
+										<div className={styles.projectTag} key={index}>
+											<p>{tags[tagKey]}</p>
+										</div>
+									))}
 								</div>
-								<div className={styles.projectLangList}></div>
+								<div className={styles.projectLangList}>
+									{Object.entries(project.lang).map(([key, lang], index) => (
+										<div className={styles.projectLangImg} key={index}>
+											<Image src={`/icons/tech/${lang}.svg`} width={25} height={25} alt='lang' />
+										</div>
+									))}
+								</div>
 							</div>
 						))}
 					</div>

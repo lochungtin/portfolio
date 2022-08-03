@@ -14,6 +14,11 @@
 	padding: 2rem;
 }
 
+.itemDetailBoxLast {
+	border: none;
+	padding: 2rem;
+}
+
 @media only screen and (max-width: 768px) {
 	.itemDetailBox {
 		width: 90vw;

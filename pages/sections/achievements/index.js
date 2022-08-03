@@ -20,7 +20,9 @@ export default function Achievements({ data }) {
 				<b>{isMobile ? 'Achievements' : 'Other Achievements'}</b>
 			</p>
 			{sorted.map((data, index) => (
-				<div className={len === index ? styles.lastBox : layoutStyles.itemDetailBox} key={index}>
+				<div
+					className={`${layoutStyles.itemDetailBox} ${len === index ? layoutStyles.itemDetailBoxLast : ''}`}
+					key={index}>
 					<div className={layoutStyles.horizontalParagraphs}>
 						<p className={textStyles.itemDetailTitle}>
 							<b>{data.name}</b>

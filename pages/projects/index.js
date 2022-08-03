@@ -10,8 +10,8 @@ import useMediaQuery from '../utils/media';
 import FilterTag from './filtertag';
 
 import styles from '../../styles/home.module.css';
-import layout from '../../styles/layout.module.css';
-import text from '../../styles/text.module.css';
+import layoutStyles from '../../styles/layout.module.css';
+import textStyles from '../../styles/text.module.css';
 
 export default function Projects() {
 	const [r0, setR0] = useState(false);
@@ -88,6 +88,8 @@ function DisplayHandling({ tags, projects }) {
 				project.desc.toLowerCase().includes(textFilter) || project.name.toLowerCase().includes(textFilter),
 		);
 
+	const len = filtered.length - 1;
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -141,8 +143,12 @@ function DisplayHandling({ tags, projects }) {
 					) : null}
 					<div className={styles.projectList}>
 						{filtered.map((project, index) => (
-							<div className={layout.itemDetailBox} key={index}>
-								<p className={text.itemDetailTitle}>{project.name}</p>
+							<div
+								className={`${layoutStyles.itemDetailBox} ${
+									len === index ? layoutStyles.itemDetailBoxLast : ''
+								}`}
+								key={index}>
+								<p className={textStyles.itemDetailTitle}>{project.name}</p>
 								<p>{project.desc}</p>
 								<div className={styles.projectTagList}>
 									{Object.keys(project.tags).map((tagKey, index) => (

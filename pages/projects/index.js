@@ -11,6 +11,7 @@ import FilterTag from './filtertag';
 import styles from '../../styles/home.module.css';
 import layout from '../../styles/layout.module.css';
 import text from '../../styles/text.module.css';
+import ReadMore from '../components/readmore';
 
 export default function Projects() {
 	const [r0, setR0] = useState(false);
@@ -134,6 +135,14 @@ function DisplayHandling({ tags, projects }) {
 											<Image src={`/icons/tech/${lang}.svg`} width={25} height={25} alt='lang' />
 										</div>
 									))}
+								</div>
+								<div className={styles.projectLinkBox}>
+									<a
+										className={styles.projectGithubLink}
+										href={`https://github.com/lochungtin/${project.repo}`}>
+										<Image src={`/icons/socials/github.svg`} width={30} height={30} alt='gh' />
+									</a>
+									<ReadMore href={project.href} />
 								</div>
 							</div>
 						))}

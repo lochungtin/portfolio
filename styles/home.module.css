@@ -52,7 +52,46 @@
 }
 
 .projectTagList {
-	align-items: centers;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.projectTag {
+	align-items: center;
+	border: 1px solid #f7821b;
+	border-radius: 1rem;
+	display: flex;
+	height: 2rem;
+	justify-content: space-between;
+	margin-right: 1rem;
+	padding: 0 1rem;
+}
+
+.projectLangList {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-top: 1rem;
+}
+
+.projectLangImg {
+	margin-right: 1rem;
+}
+
+.projectLinkBox {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.projectGithubLink {
+	height: 30px;
+	width: 30px;
+	margin-right: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -81,11 +120,8 @@
 		width: 90vw;
 	}
 
-	.projectLangList {
-		align-items: center;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	.projectLinkBox {
+		margin-top: 1rem;
 	}
 }
 
@@ -108,15 +144,5 @@
 	.tagList {
 		margin-right: 2rem;
 		width: 12rem;
-	}
-
-	.projectDetailBox {
-		align-items: center;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.projectLangList {
 	}
 }

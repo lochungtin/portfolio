@@ -5,13 +5,13 @@ import { useEffect, useState } from 'react';
 import { getAllProjects, getFilterTags } from '../api/firebase';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import ReadMore from '../components/readmore';
 import useMediaQuery from '../utils/media';
 import FilterTag from './filtertag';
 
 import styles from '../../styles/home.module.css';
 import layout from '../../styles/layout.module.css';
 import text from '../../styles/text.module.css';
-import ReadMore from '../components/readmore';
 
 export default function Projects() {
 	const [r0, setR0] = useState(false);

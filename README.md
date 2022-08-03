@@ -50,7 +50,7 @@ A tag is composed of 2 characters. The **first character** determines the type o
 | i      | image                                          | 0    |
 | h      | half horizontal split (vertical for mobile)    | 1    |
 | h      | force half horizontal split                    | 1    |
-| c      | code block                                     | 1    |
+| c      | code block (not implemented yet)               | 1    |
 | f      | closing tag for code blocks                    | 2    |
 | l      | list bullet point                              | 0    |
 | g      | github button                                  | 3    |

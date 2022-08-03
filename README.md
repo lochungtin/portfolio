@@ -12,19 +12,19 @@ Content has to be formatted in a specific way for the dynamic content loading al
 
 ```json
 {
- "example1": {
-  "layout": "t0s0o1p1p2p3c-i0"
-  "t0": "title",
-  "s0": "subtitle",
-  "p1": "text paragraph 1",
-  "p2": "text paragraph 2",
-  "p3": "text paragraph 3",
-  "i0": {
-   "width": 20,
-   "height": 20,
-   "href": "path/to/image.png",
-  }
- }
+    "example1": {
+        "layout": "t0s0o1p1p2p3c-i0",
+        "t0": "title",
+        "s0": "subtitle",
+        "p1": "text paragraph 1",
+        "p2": "text paragraph 2",
+        "p3": "text paragraph 3",
+        "i0": {
+            "width": 20,
+            "height": 20,
+            "href": "path/to/image.png",
+        }
+    }
 }
 ```
 
@@ -82,16 +82,16 @@ Using the algorithm above `example 1` will be parsed as follows
 
 ```html
 <div className={styles.root}>
- <p className={styles.title}>{data[t0]}</p>
- <p className={styles.subtitle}>{data[s0]}</p>
- <div className={styles.m1}>
-  <p className={styles.text}>{data[p1]}</p>
-  <p className={styles.text}>{data[p2]}</p>
-  <p className={styles.text}>{data[p3]}</p>
- </div>
- <Image src={data[i0].herf} alt='img'
-  width={data[i0].width}
-  height={data[i0].height}
- />
+    <p className={styles.title}>{data[t0]}</p>
+    <p className={styles.subtitle}>{data[s0]}</p>
+    <div className={styles.m1}>
+        <p className={styles.text}>{data[p1]}</p>
+        <p className={styles.text}>{data[p2]}</p>
+        <p className={styles.text}>{data[p3]}</p>
+    </div>
+    <Image src={data[i0].herf} alt='img'
+        width={data[i0].width}
+        height={data[i0].height}
+    />
 </div>
 ```

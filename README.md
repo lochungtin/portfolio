@@ -2,9 +2,9 @@
 
 This is a simple website to host my:
 
-- personal information
-- projects
-- achievements.
+- Personal Information
+- Projects
+- Achievements.
 
 The most notable feature is the projects page and how individual project's content is displayed. A **Dynamic Content Loading System** is created using a stack-based architecture to procedurally generate HTML tags and its corresponding content. Below is the full documentation of the dynamic content loading algorithm.
 

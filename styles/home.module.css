@@ -39,9 +39,8 @@
 }
 
 .clearBtn {
-	height: 2.5rem;
-	width: 2.5rem;
-	margin: 1rem 0rem;
+	height: 25px;
+	width: 25px;
 }
 
 .tagList {
@@ -66,11 +65,23 @@
 	}
 
 	.searchInput {
-		width: 60vw;
+		width: 50vw;
+	}
+
+	.expandBtn {
+		height: 30px;
+		width: 30px;
 	}
 
 	.tagList {
 		width: 90vw;
+	}
+
+	.projectLangList {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 }
 
@@ -93,5 +104,15 @@
 	.tagList {
 		margin-right: 2rem;
 		width: 12rem;
+	}
+
+	.projectDetailBox {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.projectLangList {
 	}
 }

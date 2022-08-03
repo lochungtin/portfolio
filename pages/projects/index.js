@@ -165,12 +165,14 @@ function DisplayHandling({ tags, projects }) {
 									))}
 								</div>
 								<div className={styles.projectLinkBox}>
-									<a
-										className={styles.projectGithubLink}
-										href={`https://github.com/lochungtin/${project.repo}`}>
-										<Image src={`/icons/socials/github.svg`} width={30} height={30} alt='gh' />
-									</a>
-									<ReadMore href={project.href} />
+									{project.repo ? (
+										<a
+											className={styles.projectGithubLink}
+											href={`https://github.com/lochungtin/${project.repo}`}>
+											<Image src={`/icons/socials/github.svg`} width={30} height={30} alt='gh' />
+										</a>
+									) : null}
+									{project.href ? <ReadMore href={project.href} /> : null}
 								</div>
 							</div>
 						))}

@@ -76,13 +76,18 @@ export default function Projects() {
 					</div>
 					{isMobile ? (
 						<button onClick={toggleExpanded}>
-							<Image src='/icons/filter.svg' alt='filter' width={35} height={35} />
+							<div className={styles.expandBtn}>
+								<Image src='/icons/filter.svg' alt='filter' width={30} height={30} />
+							</div>
 						</button>
 					) : null}
 				</div>
 				<div className={styles.horizontalSplit}>
 					{showFilter ? (
 						<div className={styles.tagList}>
+							<p>
+								<b>Project Tag Filter</b>
+							</p>
 							{Object.entries(tags).map(([key, tag], index) => (
 								<FilterTag
 									key={index}
@@ -100,14 +105,13 @@ export default function Projects() {
 						</div>
 					) : null}
 					<div className={styles.projectList}>
-						<div className={layout.itemDetailBox}>
-							<p className={text.itemDetailTitle}>Some Project Name</p>
-						</div>
-						<div className={layout.itemDetailBox}>
-							<p className={text.itemDetailTitle}>Some Project Name</p>
-						</div>
-						<div className={layout.itemDetailBox}>
-							<p className={text.itemDetailTitle}>Some Project Name</p>
+						<div className={`${layout.itemDetailBox} ${styles.projectDetailBox}`}>
+							<div>
+								<p className={text.itemDetailTitle}>Some Project Name</p>
+								<p>Some Text</p>
+								<div></div>
+							</div>
+							<div className={styles.projectLangList}></div>
 						</div>
 					</div>
 				</div>

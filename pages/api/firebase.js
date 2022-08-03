@@ -21,7 +21,23 @@ export const getFormalEducation = () => get(ref(db, 'education/formal')).then((s
 
 export const getOnlineEducation = () => get(ref(db, 'education/online')).then((s) => s.val());
 
-export const getPinnedProjects = () => get(ref(db, 'projects/pinned')).then((s) => s.val());
+export const getPinnedProjects = async () => {
+	const pinnedRefData = await get(ref(db, 'projects/pinned')).then((s) => s.val());
+
+	const promises = [];
+	Object.keys(pinnedRefData).forEach((key) => {
+		promises.push(get(ref(db, `projects/summary/${key}`)));
+	});
+
+	const resolves = await Promise.allSettled(promises);
+	const details = resolves.map((resolve) => {
+		let dataVal = resolve.value.val();
+		delete dataVal['tags'];
+		return dataVal;
+	});
+
+	return Object.entries(pinnedRefData).map(([key, data], index) => ({ ...data, ...details[index], name: key }));
+};
 
 export const getAchievements = () => get(ref(db, 'achievements/')).then((s) => s.val());
 

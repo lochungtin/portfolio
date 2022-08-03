@@ -109,7 +109,7 @@ export default function Projects() {
 							<div>
 								<p className={text.itemDetailTitle}>Some Project Name</p>
 								<p>Some Text</p>
-								<div></div>
+								<div className={styles.projectTagList}></div>
 							</div>
 							<div className={styles.projectLangList}></div>
 						</div>

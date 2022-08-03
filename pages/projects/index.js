@@ -33,6 +33,8 @@ export default function Projects() {
 			});
 	});
 
+	if (!r0 || !r1) return <div></div>;
+
 	return <DisplayHandling tags={d0} projects={d1} />;
 }
 
@@ -49,17 +51,35 @@ function DisplayHandling({ tags, projects }) {
 
 	const showFilter = isMobile === expanded;
 
-	const clearSearch = () => setTextFilter('');
-
 	const toggleExpanded = () => setExpanded(!expanded);
 
-	const handleTextChange = (event) => setTextFilter(event.target.value);
+	const clearSearch = () => setTextFilter('');
+
+	const handleSearchChange = (event) => setTextFilter(event.target.value);
+
+	const clearTagFilter = () => setTagFilter(emptyTagFilter);
 
 	const handleLabelToggle = (key) =>
 		setTagFilter(() => {
 			let next = { ...tagFilter };
 			next[key] = !next[key];
 			return next;
+		});
+
+	let filtered = Object.entries(projects).map(([key, data]) => ({ ...data, name: key }));
+
+	let tagFiltering = false;
+	for (const [tag, filtering] of Object.entries(tagFilter))
+		if (filtering) {
+			tagFiltering = true;
+			break;
+		}
+
+	if (tagFiltering)
+		filtered = filtered.filter((project) => {
+			for (const tagKey of Object.keys(project.tags)) if (tagFilter[tagKey]) return true;
+
+			return false;
 		});
 
 	return (
@@ -79,7 +99,7 @@ function DisplayHandling({ tags, projects }) {
 							type='text'
 							placeholder='Search Filter ...'
 							value={textFilter}
-							onChange={handleTextChange}
+							onChange={handleSearchChange}
 						/>
 						<button onClick={clearSearch}>
 							<div className={styles.clearBtn}>
@@ -110,17 +130,13 @@ function DisplayHandling({ tags, projects }) {
 									handleToggle={handleLabelToggle}
 								/>
 							))}
-							<FilterTag
-								tag='Clear Filters'
-								checked={false}
-								handleToggle={() => setTagFilter(emptyTagFilter)}
-							/>
+							<FilterTag tag='Clear Filters' checked={false} handleToggle={clearTagFilter} />
 						</div>
 					) : null}
 					<div className={styles.projectList}>
-						{Object.entries(projects).map(([key, project], index) => (
+						{filtered.map((project, index) => (
 							<div className={layout.itemDetailBox} key={index}>
-								<p className={text.itemDetailTitle}>{key}</p>
+								<p className={text.itemDetailTitle}>{project.name}</p>
 								<p>{project.desc}</p>
 								<div className={styles.projectTagList}>
 									{Object.keys(project.tags).map((tagKey, index) => (

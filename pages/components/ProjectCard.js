@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import "project.module.css";
+
 export default function SkillCard({ title, sub, icon1, icon2, icon3, textTitle, text, link }) {
     return (
         <div className='projectCard'>

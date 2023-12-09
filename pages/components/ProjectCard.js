@@ -11,7 +11,7 @@ export default function SkillCard({ title, sub, icon1, icon2, icon3, textTitle, 
                     {icon1 ? (
                         <Image
                             className='icon'
-                            src={'/icons/' + icon1 + '.svg'}
+                            src={'/assets/' + icon1 + '.svg'}
                             width={100}
                             height={100}
                             alt={icon1}
@@ -22,7 +22,7 @@ export default function SkillCard({ title, sub, icon1, icon2, icon3, textTitle, 
                     {icon2 ? (
                         <Image
                             className='icon'
-                            src={'/icons/' + icon2 + '.svg'}
+                            src={'/assets/' + icon2 + '.svg'}
                             width={100}
                             height={100}
                             alt={icon2}
@@ -33,7 +33,7 @@ export default function SkillCard({ title, sub, icon1, icon2, icon3, textTitle, 
                     {icon3 ? (
                         <Image
                             className='icon'
-                            src={'/icons/' + icon3 + '.svg'}
+                            src={'/assets/' + icon3 + '.svg'}
                             width={100}
                             height={100}
                             alt={icon3}
@@ -52,7 +52,7 @@ export default function SkillCard({ title, sub, icon1, icon2, icon3, textTitle, 
                     <div className='actions'>
                         <Image
                             className='github'
-                            src='/icons/github.svg'
+                            src='/assets/github.svg'
                             width={100}
                             height={100}
                             alt='gh'

@@ -6,7 +6,7 @@ export default function SkillCard({ icon, name, score }) {
             <div className='top'>
                 <Image
                     className='icon'
-                    src={'/icons/' + icon + '.svg'}
+                    src={'/assets/' + icon + '.svg'}
                     width={100}
                     height={100}
                     alt={name}

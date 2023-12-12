@@ -1,4 +1,4 @@
-import { EducationCard, SkillCard } from "./cards";
+import { AchievementCard, EducationCard, ProjectCard, SkillCard } from "./cards";
 import layout from './layout.module.css';
 
 const Skills = () => {
@@ -31,7 +31,50 @@ const Skills = () => {
 }
 
 const Projects = () => {
+	return (
+		<section>
+			<h1><span>PRO</span>JECTS</h1>
 
+			<ProjectCard
+				otitle="Ultrasound Auto-Seg"
+				sub="Auto-Segmentation of medical scans"
+				icon1="python"
+				icon2="numpy"
+				icon3="pytorch"
+				cTitle="Auto-Seg"
+				text="(auto-segmentation) of ultrasonic scans for ovarian masses is my main research focus for my Master's thesis. My diagnosis pipline managed to achieved an accuracy of 92%."
+				gh=""
+			/>
+			<ProjectCard
+				otitle="CoinControl"
+				sub="Money Management App"
+				icon1="typescript"
+				icon2="react"
+				icon3="firebase"
+				cTitle="CoinControl"
+				text="is a money management mobile app with an account system, cloud backup, analytics, and also a built-in calculator for easy calculations for recording cashflow"
+				gh="https://github.com/lochungtin/coincontrol"
+			/>
+			<ProjectCard
+				otitle="Expedite"
+				sub="Puzzle Game Solver"
+				icon1="python"
+				icon2="cplusplus"
+				icon3="javascript"
+				cTitle="Project Expedite"
+				text="is my attempt to create solutions, algorithms, or solvers to classic puzzle games. A few principles are setup and all the algorithms abide by these principles."
+				gh=""
+			/>
+			<ProjectCard
+				otitle="RL Pacman"
+				sub="Undergraduate Project"
+				icon1="python"
+				cTitle="RL Pacman"
+				text="is my undergraduate disseration. The topic is to use the Pacman environment to study the differences of classic reinforcement learning and genetic algorithm."
+				gh=""
+			/>
+		</section>
+	);
 }
 
 const Education = () => {
@@ -75,11 +118,46 @@ const Education = () => {
 	);
 }
 
+const Achievements = () => {
+	return (
+		<section>
+			<h1><span>ACH</span>IEVEMENTS</h1>
+
+			<AchievementCard
+				date="November 2020"
+				title="Hack Sheffield"
+				sub="Multi-award-winning Hackathon Project"
+				text="Our team built a working android mobile app with React Native in 24 hours and won best financial hack and best google cloud hack in the 6th Hack Sheffield hackathon."
+			/>
+			<AchievementCard
+				date="Summer 2018"
+				title="MITIA Summer Camp"
+				sub="Entrepreneurship Summer Camp"
+				text="I was selected to join a highly intensive week summer camp hosted by the MIT Innovative Academy and MIT Innovation Node in Hong Kong."
+			/>
+			<AchievementCard
+				date="May 2017"
+				title="18th Annual Robofest"
+				sub="Double Robotics World Championship"
+				text="Our team was awarded World Championship and the People's Choice Award in the 18th annual Robofest Global Robotics Art Festival in 2017."
+			/>
+			<AchievementCard
+				date="Summer 2015"
+				title="HK Maths Olympiad"
+				sub="Modelling Paper Championship"
+				text="Our team was awarded first place in the Hong Kong Junior Maths Olympiad Modeling Paper for a paper on calculating the day of week given an arbitrary date."
+			/>
+		</section>
+	);
+}
+
 export default function Home() {
 	return (
 		<main>
 			<Skills />
+			<Projects />
 			<Education />
+			<Achievements />
 		</main>
 	)
 }

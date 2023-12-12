@@ -10,7 +10,6 @@
     top: -8px;
     width: 2rem;
     z-index: 1;
-    /* border: 1px solid white; */
 }
 
 .left {
@@ -40,7 +39,7 @@
 }
 
 .top {
-    width: 90%;
+    width: 95%;
 }
 
 .location {
@@ -51,5 +50,5 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
 }

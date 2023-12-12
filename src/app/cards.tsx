@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import achievements from './achievement.module.css';
 import education from './education.module.css';
+import project from './project.module.css';
 import skills from './skill.module.css';
 
 export const SkillCard = ({
@@ -10,10 +12,45 @@ export const SkillCard = ({
     return (
         <div className={skills.card}>
             <div className={skills.top}>
-                <Image className={skills.icon} src={"./assets/" + icon + ".svg"} height={100} width={100} alt={name} />
+                <Image className={skills.icon} src={"./assets/" + icon + ".svg"} height={100} width={100} alt="icon" />
                 <p>{name}</p>
             </div>
             <div className={skills.indicator + " " + skills["i" + score]}></div>
+        </div>
+    );
+}
+
+export const ProjectCard = ({
+    otitle, sub, icon1, icon2, icon3, cTitle, text, gh
+}: {
+    otitle: string,
+    sub: string,
+    icon1: string,
+    icon2?: string,
+    icon3?: string,
+    cTitle: string,
+    text: string,
+    gh: string
+}) => {
+    return (
+        <div className={project.card}>
+            <div className={project.dots}></div>
+            <div className={project.overlay}>
+                <p className={project.oTitle}>{otitle}</p>
+                <p className={project.subtitle}>{sub}</p>
+                <div className={project.icons}>
+                    {icon1 ? <Image className={project.icon} src={"assets/" + icon1 + ".svg"} height={100} width={100} alt="icon" /> : <></>}
+                    {icon2 ? <Image className={project.icon} src={"assets/" + icon2 + ".svg"} height={100} width={100} alt="icon" /> : <></>}
+                    {icon3 ? <Image className={project.icon} src={"assets/" + icon3 + ".svg"} height={100} width={100} alt="icon" /> : <></>}
+                </div>
+            </div>
+            <div className={project.content}>
+                <p className={project.text}><span className={project.ctitle}>{cTitle}</span> {text}</p>
+                <div className={project.actions}>
+                    <Image className={project.icon} src="assets/github.svg" height={100} width={100} alt="icon" />
+                    <a className={project.action} href={gh}>Learn More</a>
+                </div>
+            </div>
         </div>
     );
 }
@@ -44,6 +81,22 @@ export const EducationCard = ({
                     </div>
                 </div>
             </div>
+        </div>
+    );
+}
+
+export const AchievementCard = ({
+    date, title, sub, text
+}: {
+    date: string, title: string, sub: string, text: string
+}) => {
+    return (
+        <div className={achievements.card}>
+            <div className={achievements.shape}></div>
+            <p className={achievements.date}>{date}</p>
+            <p className={achievements.title}>{title}</p>
+            <p className={achievements.subtitle}>{sub}</p>
+            <p className={achievements.text}>{text}</p>
         </div>
     );
 }

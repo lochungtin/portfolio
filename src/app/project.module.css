@@ -1,0 +1,147 @@
+.card {
+    aspect-ratio: 4 / 3;
+    background-color: rgba(var(--t2_color), 0.1);
+    border-radius: 1rem;
+    border: 2px rgb(var(--t2_color)) solid;
+    box-shadow: 0px 0px 10px rgba(var(--t2_color), 0.5);
+    overflow: hidden;
+    position: relative;
+    transition-duration: 500ms;
+    width: 90vw;
+    z-index: 10;
+}
+
+.card:hover {
+    border: 2px transparent solid;
+    box-shadow: 0px 0px 10px rgba(var(--t2_color), 0);
+}
+
+.dots {
+    background: radial-gradient(rgb(var(--t0_color)) 0px, transparent 2px, transparent 15px);
+    background-size: 15px 15px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.2;
+    position: absolute;
+    top: 0px;
+    transition-duration: 500ms;
+    width: 100%;
+    z-index: 1;
+}
+
+.card:hover .dots {
+    animation: none;
+    background-position: 20% -5%;
+    opacity: 0.5;
+}
+
+.overlay {
+    background: linear-gradient(135deg,
+            transparent 0%,
+            transparent 40%,
+            rgba(var(--t4_color), 0.7) 55%,
+            rgba(var(--t3_color), 0.7) 75%,
+            rgba(var(--t2_color), 0.7) 90%,
+            rgba(var(--t0_color), 0.9) 120%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    height: 250%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition-duration: 300ms;
+    width: 250%;
+    z-index: 2;
+}
+
+.card:hover .overlay {
+    left: -150%;
+    top: -150%;
+}
+
+.oTitle {
+    font-size: 2.5rem;
+    left: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+}
+
+.subtitle {
+    left: 1.5rem;
+    position: absolute;
+    text-wrap: balance;
+    top: 5.25rem;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    left: 1.5rem;
+    position: absolute;
+    top: 5.75rem;
+}
+
+.icon {
+    aspect-ratio: 1;
+    filter: drop-shadow(0px 0px 3px rgba(var(--t0_color), 0.4));
+    width: 2rem;
+}
+
+.content {
+    align-items: center;
+    color: rgb(var(--t4_color));
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    height: calc(100% * 0.8);
+    justify-content: space-between;
+    left: 1.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 2rem;
+    transition-delay: 0ms;
+    transition-duration: 0ms;
+    width: calc(100% - 3rem);
+    z-index: 4;
+}
+
+.card:hover .content {
+    opacity: 1;
+    transition-delay: 200ms;
+    transition-duration: 300ms;
+}
+
+.ctitle {
+    color: rgb(var(--t0_color));
+    font-size: 2rem;
+}
+
+.text {
+    text-align: left;
+    text-justify: justify;
+    line-height: 1.75rem;
+}
+
+.actions {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    height: 3rem;
+    justify-content: left;
+}
+
+.action {
+    align-items: center;
+    background-color: rgba(var(--t0_color), 0.3);
+    border-radius: 6px;
+    border: 1px solid rgb(var(--t0_color));
+    color: rgb(var(--t4_color));
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    text-decoration: none;
+    width: 60vw;
+}

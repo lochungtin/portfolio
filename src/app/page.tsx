@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AchievementCard, EducationCard, ProjectCard, SkillCard } from "./cards";
 import layout from './layout.module.css';
 
@@ -15,12 +16,12 @@ const Skills = () => {
 				<SkillCard icon="pandas" name="Pandas" score="4" />
 			</div>
 			<div className={layout.row}>
-				<SkillCard icon="javascript" name="JavaScript" score="5" />
 				<SkillCard icon="typescript" name="TypeScript" score="4" />
+				<SkillCard icon="javascript" name="JavaScript" score="5" />
 			</div>
 			<div className={layout.row}>
-				<SkillCard icon="react" name="ReactJS" score="5" />
 				<SkillCard icon="nextjs" name="NextJS" score="4" />
+				<SkillCard icon="react" name="ReactJS" score="5" />
 			</div>
 			<div className={layout.row}>
 				<SkillCard icon="cplusplus" name="C++" score="3" />
@@ -151,13 +152,36 @@ const Achievements = () => {
 	);
 }
 
+const SocialBtn = ({ icon, href }: { icon: string, href: string }) => {
+	return (
+		<a href={href}>
+			<Image className={layout.icon} src={"./assets/" + icon + ".svg"} height={100} width={100} alt="icon" />
+		</a>
+	);
+}
+
 export default function Home() {
 	return (
-		<main>
-			<Skills />
-			<Projects />
-			<Education />
-			<Achievements />
-		</main>
+		<>
+			<main>
+				<Skills />
+				<Projects />
+				<Education />
+				<Achievements />
+			</main>
+			<footer>
+				<div className={layout.row}>
+					<SocialBtn icon="twitter" href="" />
+					<SocialBtn icon="discord" href="" />
+					<SocialBtn icon="instagram" href="" />
+					<SocialBtn icon="github" href="" />
+					<SocialBtn icon="npm" href="" />
+					<SocialBtn icon="linkedin" href="" />
+					<SocialBtn icon="gmail" href="" />
+				</div>
+				<p>Made with 🤍 and ☕ by Timothy Lo</p>
+				<p className={layout.copyright}>Copyright © 2023 Chung Tin Lo. All Rights Reserved.</p>
+			</footer>
+		</>
 	)
 }

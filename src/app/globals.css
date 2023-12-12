@@ -48,3 +48,10 @@ h1 {
 a {
 	text-decoration: none;
 }
+
+footer {
+	text-align: center;
+	background-color: rgb(var(--t1_color));
+	margin-top: 3rem;
+	width: 100vw;
+}

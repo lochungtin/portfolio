@@ -5,3 +5,16 @@
     justify-content: center;
     gap: 1rem;
 }
+
+.icon {
+    aspect-ratio: 1;
+    margin-top: 1rem;
+    width: 1.75rem;
+}
+
+.copyright {
+    color: rgb(var(--t3_color));
+    font-size: 1rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}

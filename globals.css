@@ -1,0 +1,30 @@
+:root {
+	--t0_color: 246, 235, 228;
+	--t1_color: 47, 80, 88;
+	--t2_color: 134, 233, 179;
+	--t3_color: 64, 152, 160;
+	--t4_color: 25, 59, 80;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	align-items: center;
+	background-color: rgb(var(--t4_color));
+	color: rgb(var(--t0_color));
+	display: flex;
+	flex-direction: column;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 2rem;
+	font-weight: 300;
+	height: 100%;
+	justify-content: center;
+	line-height: 3rem;
+	overflow-x: hidden;
+	user-select: none;
+	width: 100%;
+}

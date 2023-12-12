@@ -1,8 +1,8 @@
-.timeline {
+.education>.card {
     position: relative;
 }
 
-.timeline>.cover {
+.education>.card>.cover {
     background-color: rgb(var(--t4_color));
     height: calc(100% + 20px);
     position: absolute;
@@ -10,22 +10,22 @@
     width: 3rem;
 }
 
-.timeline>.left {
+.education>.card>.left {
     left: -11px;
 }
 
-.timeline>.right {
+.education>.card>.right {
     right: -18px;
 }
 
-.timeline>.border {
+.education>.card>.border {
     border-radius: 2rem;
     border: 2px solid rgb(var(--t3_color));
     box-shadow: 0px 0px 10px rgba(var(--t2_color), 0.5);
     width: 90vw;
 }
 
-.timeline>.border>.content {
+.education>.card>.border>.content {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     margin-right: 3rem;
 }
 
-.timeline>.border>.content>.details {
+.education>.card>.border>.content>.details {
     align-items: center;
     display: flex;
     justify-content: space-between;

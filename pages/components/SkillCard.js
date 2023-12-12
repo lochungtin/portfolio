@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function SkillCard({ icon, name, score }) {
     return (
-        <div className='skillCard'>
+        <div className='card'>
             <div className='top'>
                 <Image
                     className='icon'
@@ -15,7 +15,9 @@ export default function SkillCard({ icon, name, score }) {
             </div>
             <div
                 className='indicators'
-                style={'clip-path: inset(0 0 0 0 round ' + (20 - score / 5).toString() + 'rem);'}
+                style={{
+                    clipPath: 'inset(0 0 0 0 round ' + (20 - score / 5).toString() + 'rem)'
+                }}
             ></div>
         </div>
     );

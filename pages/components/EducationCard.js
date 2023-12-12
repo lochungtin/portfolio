@@ -1,6 +1,6 @@
 export default function EducationCard({ cover, title, highlight, location, start, end, grade }) {
     return (
-        <div className='educationCard'>
+        <div className="card">
             <div className={'cover ' + cover}></div>
             <div className='border'>
                 <div className='top'>

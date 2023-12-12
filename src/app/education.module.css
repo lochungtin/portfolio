@@ -1,0 +1,55 @@
+.card {
+    position: relative;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.cover {
+    background-color: rgba(var(--t4_color), 1);
+    height: calc(100% + 16px);
+    position: absolute;
+    top: -8px;
+    width: 2rem;
+    z-index: 1;
+    /* border: 1px solid white; */
+}
+
+.left {
+    left: -15px;
+}
+
+.right {
+    right: -15px;
+}
+
+.border {
+    border-radius: 1rem;
+    border: 2px solid rgb(var(--t3_color));
+    box-shadow: 0px 0px 5px rgba(var(--t2_color), 0.6);
+    width: 90vw;
+    z-index: 0;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.top {
+    width: 90%;
+}
+
+.location {
+    font-size: 1rem;
+}
+
+.details {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}

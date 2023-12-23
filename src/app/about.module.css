@@ -1,0 +1,166 @@
+.badge {
+    align-items: center;
+    aspect-ratio: 10 / 16;
+    background-color: rgba(var(--t2_color), 0.2);
+    border-radius: 1rem;
+    border: 2px rgb(var(--t2_color)) solid;
+    box-shadow: 0px 0px 10px rgba(var(--t2_color), 0.5);
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    overflow: hidden;
+    position: relative;
+    text-shadow: 0px 0px 10px rgb(var(--t0_color));
+    height: 80vh;
+    max-width: 90vw;
+    /* padding: 20px; */
+    z-index: 10;
+}
+
+.overlay {
+    animation: overlay-pan 20s infinite linear;
+    background: linear-gradient(rgba(var(--t2_color), 0.1),
+            rgba(var(--t1_color), 0.1) 2px,
+            transparent 2px,
+            transparent 20px);
+    background-size: 100% 22px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.image {
+    animation: image-pan 25s infinite linear;
+    filter: saturate(0) contrast(0.5) brightness(0.5);
+    height: 100%;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.content {
+    align-items: center;
+    aspect-ratio: 10 / 16;
+    border-radius: 0.6rem;
+    border: 2px solid rgba(var(--t0_color), 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem;
+    position: relative;
+    z-index: 3;
+    width: 90%;
+}
+
+.icon {
+    width: 40%;
+    filter: drop-shadow(0px 0px 40px rgb(var(--t4_color)));
+}
+
+.name {
+    color: rgb(var(--t0_color));
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+
+.link {
+    color: rgb(var(--t0_color));
+    text-decoration: none;
+}
+
+/* .indicatorRoot {
+    aspect-ratio: 45;
+    position: relative;
+    width: 600px;
+}
+
+.indicators {
+    background: linear-gradient(to left,
+            transparent,
+            transparent 20px,
+            rgb(var(--t2_color)) 20px,
+            rgb(var(--t0_color)) 150px,
+            rgb(var(--t0_color)) 180px,
+            transparent 180px,
+            transparent 200px,
+        );
+    background-size: 200px 100%;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+} */
+
+.intro {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight {
+    font-size: 3rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    text-align: justify;
+    width: 85%;
+    max-width: 900px;
+}
+
+
+@keyframes overlay-pan {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+@keyframes image-pan {
+    0% {
+        background-position: 50% 50%;
+        background-size: 150%;
+    }
+
+    33% {
+        background-position: 10% 20%;
+        background-size: 250%;
+    }
+
+    34% {
+        background-position: 20% 90%;
+        background-size: 250%;
+    }
+
+    66% {
+        background-position: 90% 50%;
+        background-size: 400%;
+    }
+
+    67% {
+        background-position: 100% 80%;
+        background-size: 300%;
+    }
+
+    99% {
+        background-position: 0% 80%;
+        background-size: 200%;
+    }
+
+    100% {
+        background-position: 50% 50%;
+        background-size: 150%;
+    }
+}

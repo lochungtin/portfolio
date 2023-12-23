@@ -1,0 +1,89 @@
+/* original */
+:root {
+    --t0_color: 246, 235, 228;
+    --t1_color: 47, 80, 88;
+    --t2_color: 134, 233, 179;
+    --t3_color: 64, 152, 160;
+    --t4_color: 25, 59, 80;
+}
+
+/* dark yellow */
+:root {
+    --t0_color: 246, 235, 228;
+    --t1_color: 69, 70, 42;
+    --t2_color: 220, 133, 31;
+    --t3_color: 126, 89, 32;
+    --t4_color: 52, 51, 48;
+}
+
+/* red */
+:root {
+    --t0_color: 246, 232, 234;
+    --t1_color: 90, 0, 1;
+    --t2_color: 244, 91, 105;
+    --t3_color: 241, 48, 48;
+    --t4_color: 34, 24, 28;
+}
+
+/* dark brown */
+:root {
+    --t0_color: 255, 255, 255;
+    --t1_color: 58, 38, 24;
+    --t2_color: 154, 136, 115;
+    --t3_color: 117, 64, 67;
+    --t4_color: 23, 22, 20;
+}
+
+/* orange brown */
+:root {
+    --t0_color: 242, 239, 233;
+    --t1_color: 86, 78, 88;
+    --t2_color: 191, 180, 143;
+    --t3_color: 170, 61, 14;
+    --t4_color: 37, 38, 39;
+}
+
+/* white purple */
+:root {
+    --t0_color: 36, 32, 56;
+    --t1_color: 202, 196, 206;
+    --t2_color: 144, 103, 198;
+    --t3_color: 141, 134, 201;
+    --t4_color: 247, 236, 225;
+}
+
+/* light green */
+:root {
+    --t0_color: 241, 255, 250;
+    --t1_color: 86, 130, 89;
+    --t2_color: 204, 252, 203;
+    --t3_color: 150, 230, 179;
+    --t4_color: 58, 64, 59;
+}
+
+/* red blue */
+:root {
+    --t0_color: 255, 247, 248;
+    --t1_color: 140, 94, 88;
+    --t2_color: 255, 166, 158;
+    --t3_color: 255, 126, 107;
+    --t4_color: 29, 30, 44;
+}
+
+/* orange blue */
+:root {
+    --t0_color: 225, 229, 238;
+    --t1_color: 118, 123, 145;
+    --t2_color: 199, 204, 219;
+    --t3_color: 247, 197, 159;
+    --t4_color: 42, 50, 75;
+}
+
+/* orange blue */
+:root {
+    --t0_color: 239, 241, 243;
+    --t1_color: 91, 113, 109;
+    --t2_color: 216, 180, 160;
+    --t3_color: 215, 122, 97;
+    --t4_color: 34, 56, 67;
+}

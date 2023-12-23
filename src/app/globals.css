@@ -1,9 +1,9 @@
 :root {
-	--t0_color: 246, 235, 228;
-	--t1_color: 47, 80, 88;
-	--t2_color: 134, 233, 179;
-	--t3_color: 64, 152, 160;
-	--t4_color: 25, 59, 80;
+	--t0_color: 225, 229, 238;
+	--t1_color: 118, 123, 145;
+	--t2_color: 139, 150, 187;
+	--t3_color: 247, 197, 159;
+	--t4_color: 42, 50, 75;
 }
 
 * {
@@ -42,7 +42,16 @@ span {
 h1 {
 	font-size: 4rem;
 	line-height: 4rem;
-	margin-top: 4rem;
+	margin: 4rem 0 2rem 0;
+}
+
+h2 {
+	line-height: 5rem;
+	border-bottom: 2px solid rgb(var(--t3_color));
+	padding-left: 2rem;
+	margin-bottom: 0px;
+	width: 85%;
+	max-width: 900px;
 }
 
 a {

@@ -7,7 +7,7 @@
     overflow: hidden;
     position: relative;
     transition-duration: 500ms;
-    width: 90vw;
+    width: 360px;
     z-index: 10;
 }
 
@@ -96,15 +96,13 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    height: calc(100% * 0.8);
+    height: 100%;
     justify-content: space-between;
-    left: 1.5rem;
     opacity: 0;
     position: absolute;
-    top: 2rem;
     transition-delay: 0ms;
     transition-duration: 0ms;
-    width: calc(100% - 3rem);
+    width: 100%;
     z-index: 4;
 }
 
@@ -122,6 +120,7 @@
 .text {
     text-align: left;
     text-justify: justify;
+    margin: 2rem 2rem 0 2rem;
     line-height: 1.75rem;
 }
 
@@ -130,7 +129,9 @@
     display: flex;
     gap: 20px;
     height: 3rem;
-    justify-content: left;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 80%;
 }
 
 .action {
@@ -143,5 +144,5 @@
     height: 100%;
     justify-content: center;
     text-decoration: none;
-    width: 60vw;
+    width: 80%;
 }

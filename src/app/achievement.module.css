@@ -1,7 +1,7 @@
 .card {
     align-items: center;
-    background-color: rgb(var(--t0_color));
-    box-shadow: 0px 0px 10px rgb(var(--t1_color));
+    background-color: rgba(var(--t0_color), 0.3);
+    box-shadow: 0px 0px 10px rgba(var(--t1_color), 0.5);
     border-radius: 1rem;
     color: rgb(var(--t4_color));
     display: flex;
@@ -10,7 +10,8 @@
     justify-content: flex-start;
     overflow: hidden;
     position: relative;
-    width: 90vw;
+    width: 90%;
+    max-width: 360px;
 }
 
 .shape {
@@ -19,7 +20,7 @@
     left: -50px;
     width: 200%;
     height: 100%;
-    background-color: rgba(var(--t2_color), 0.4);
+    background-color: rgba(var(--t2_color), 0.5);
     z-index: 0;
     rotate: 150deg;
 }
@@ -30,26 +31,26 @@
     line-height: 1rem;
     margin-top: 2rem;
     text-align: balance;
-    width: 80vw;
+    width: 80%;
     z-index: 1;
 }
 
 .title {
     font-size: 2.5rem;
     line-height: 2.5rem;
-    width: 80vw;
+    width: 80%;
     z-index: 1;
 }
 
 .subtitle {
     text-wrap: balance;
-    width: 80vw;
+    width: 80%;
     z-index: 1;
 }
 
 .text {
     margin: 1rem 0 1.5rem 0;
     text-justify: justify;
-    width: 80vw;
+    width: 80%;
     z-index: 1;
 }

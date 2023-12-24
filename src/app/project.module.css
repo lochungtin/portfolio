@@ -1,5 +1,5 @@
 .card {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3.5;
     background-color: rgba(var(--t2_color), 0.1);
     border-radius: 1rem;
     border: 2px rgb(var(--t2_color)) solid;

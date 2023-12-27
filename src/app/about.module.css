@@ -59,7 +59,7 @@
 
 .icon {
     width: 40%;
-    filter: drop-shadow(0px 0px 40px rgb(var(--t4_color)));
+    filter: drop-shadow(0px 0px 40px rgba(var(--t3_color), 0.3));
 }
 
 .name {

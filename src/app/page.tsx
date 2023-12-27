@@ -216,13 +216,11 @@ export default function Home() {
 			</main>
 			<footer>
 				<div className={layout.row}>
-					<SocialBtn icon="twitter" href="" />
-					<SocialBtn icon="discord" href="" />
-					<SocialBtn icon="instagram" href="" />
-					<SocialBtn icon="github" href="" />
-					<SocialBtn icon="npm" href="" />
-					<SocialBtn icon="linkedin" href="" />
-					<SocialBtn icon="gmail" href="" />
+					<SocialBtn icon="discord" href="https://discord.com/users/155275561256747008" />
+					<SocialBtn icon="npm" href="https://www.npmjs.com/~lochungtin" />
+					<SocialBtn icon="github" href="https://github.com/lochungtin" />
+					<SocialBtn icon="linkedin" href="https://www.linkedin.com/in/timothy-lo-chung-tin/" />
+					<SocialBtn icon="gmail" href="mailto:lochungtin@gmail.com" />
 				</div>
 				<p>Made with 🤍 and ☕ by Timothy Lo</p>
 				<p className={layout.copyright}>Copyright © 2023 Chung Tin Lo. All Rights Reserved.</p>

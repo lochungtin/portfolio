@@ -80,7 +80,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					icon3="pytorch"
 					cTitle="Auto-Seg"
 					text="(auto-segmentation) of ultrasonic scans for ovarian masses is my main research focus for my Master's thesis. My diagnosis pipline managed to achieved an accuracy of 92%."
-					gh=""
+					doc=""
 				/>
 				<ProjectCard
 					otitle="CoinControl"
@@ -91,6 +91,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					cTitle="CoinControl"
 					text="is a money management mobile app with an account system, cloud backup, analytics, and also a built-in calculator for easy calculations for recording cashflow"
 					gh="https://github.com/lochungtin/coincontrol"
+					doc=""
 				/>
 			</div>
 			<div className={layout[desktop ? "row" : "col"]}>
@@ -103,6 +104,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					cTitle="Project Expedite"
 					text="is my attempt to create solutions, algorithms, or solvers to classic puzzle games. A few principles are setup and all the algorithms abide by these principles."
 					gh=""
+					doc=""
 				/>
 				<ProjectCard
 					otitle="RL Pacman"
@@ -111,6 +113,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					cTitle="RL Pacman"
 					text="is my undergraduate disseration. The topic is to use the Pacman environment to study the differences of classic reinforcement learning and genetic algorithm."
 					gh=""
+					doc=""
 				/>
 			</div>
 		</section>

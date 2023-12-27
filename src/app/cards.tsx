@@ -21,7 +21,7 @@ export const SkillCard = ({
 }
 
 export const ProjectCard = ({
-    otitle, sub, icon1, icon2, icon3, cTitle, text, gh
+    otitle, sub, icon1, icon2, icon3, cTitle, text, gh, doc,
 }: {
     otitle: string,
     sub: string,
@@ -30,7 +30,8 @@ export const ProjectCard = ({
     icon3?: string,
     cTitle: string,
     text: string,
-    gh: string
+    gh?: string,
+    doc?: string,
 }) => {
     return (
         <div className={project.card}>
@@ -47,8 +48,8 @@ export const ProjectCard = ({
             <div className={project.content}>
                 <p className={project.text}><span className={project.ctitle}>{cTitle}</span> {text}</p>
                 <div className={project.actions}>
-                    <Image className={project.icon} src="assets/github.svg" height={100} width={100} alt="icon" />
-                    <a className={project.action} href={gh}>Learn More</a>
+                    <a href={gh}><Image className={project.icon} src="assets/github.svg" height={100} width={100} alt="icon" /></a>
+                    <a className={project.action} href={doc}>Learn More</a>
                 </div>
             </div>
         </div>

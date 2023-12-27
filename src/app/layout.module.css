@@ -6,6 +6,15 @@
     gap: 1rem;
 }
 
+.col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
 .skill {
     width: 90%;
 }

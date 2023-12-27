@@ -1,8 +1,11 @@
+'use client'
+
 import Image from 'next/image';
 import about from './about.module.css';
 import badge from './badge.png';
 import { AchievementCard, EducationCard, ProjectCard, SkillCard } from "./cards";
 import layout from './layout.module.css';
+import useMediaQuery from './media';
 
 const About = ({ name }: { name: string }) => {
 	return (
@@ -63,12 +66,12 @@ const Skills = () => {
 	);
 }
 
-const Projects = () => {
+const Projects = ({ desktop }: { desktop: boolean }) => {
 	return (
 		<section>
 			<h1><span>PRO</span>JECTS</h1>
 
-			<div className={layout.row}>
+			<div className={layout[desktop ? "row" : "col"]}>
 				<ProjectCard
 					otitle="Ultrasound Auto-Seg"
 					sub="Auto-Segmentation of medical scans"
@@ -90,7 +93,7 @@ const Projects = () => {
 					gh="https://github.com/lochungtin/coincontrol"
 				/>
 			</div>
-			<div className={layout.row}>
+			<div className={layout[desktop ? "row" : "col"]}>
 				<ProjectCard
 					otitle="Expedite"
 					sub="Puzzle Game Solver"
@@ -155,12 +158,12 @@ const Education = () => {
 	);
 }
 
-const Achievements = () => {
+const Achievements = ({ desktop }: { desktop: boolean }) => {
 	return (
 		<section>
 			<h1><span>ACH</span>IEVEMENTS</h1>
 
-			<div className={layout.row}>
+			<div className={layout[desktop ? "rowa" : "col"]}>
 				<AchievementCard
 					date="November 2020"
 					title="Hack Sheffield"
@@ -174,7 +177,7 @@ const Achievements = () => {
 					text="I was selected to join a highly intensive week summer camp hosted by the MIT Innovative Academy and MIT Innovation Node in Hong Kong."
 				/>
 			</div>
-			<div className={layout.row}>
+			<div className={layout[desktop ? "rowa" : "col"]}>
 				<AchievementCard
 					date="May 2017"
 					title="18th Annual Robofest"
@@ -201,14 +204,15 @@ const SocialBtn = ({ icon, href }: { icon: string, href: string }) => {
 }
 
 export default function Home() {
+	const mobile = useMediaQuery("(min-width: 500px)");
 	return (
 		<>
 			<main>
 				<About name={"TIMOTHY"} />
 				<Skills />
-				<Projects />
+				<Projects mobile={mobile} />
 				<Education />
-				<Achievements />
+				<Achievements mobile={mobile} />
 			</main>
 			<footer>
 				<div className={layout.row}>

@@ -146,3 +146,7 @@
     text-decoration: none;
     width: 80%;
 }
+
+.disabled {
+    opacity: 0.2;
+}

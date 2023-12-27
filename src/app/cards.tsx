@@ -48,7 +48,7 @@ export const ProjectCard = ({
             <div className={project.content}>
                 <p className={project.text}><span className={project.ctitle}>{cTitle}</span> {text}</p>
                 <div className={project.actions}>
-                    <a href={gh}><Image className={project.icon} src="assets/github.svg" height={100} width={100} alt="icon" /></a>
+                    <a className={gh ? "" : project.disabled} href={gh}><Image className={project.icon} src="assets/github.svg" height={100} width={100} alt="icon" /></a>
                     <a className={project.action} href={doc}>Learn More</a>
                 </div>
             </div>

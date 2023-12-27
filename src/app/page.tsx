@@ -163,7 +163,7 @@ const Achievements = ({ desktop }: { desktop: boolean }) => {
 		<section>
 			<h1><span>ACH</span>IEVEMENTS</h1>
 
-			<div className={layout[desktop ? "rowa" : "col"]}>
+			<div className={layout[desktop ? "row" : "col"]}>
 				<AchievementCard
 					date="November 2020"
 					title="Hack Sheffield"
@@ -177,7 +177,7 @@ const Achievements = ({ desktop }: { desktop: boolean }) => {
 					text="I was selected to join a highly intensive week summer camp hosted by the MIT Innovative Academy and MIT Innovation Node in Hong Kong."
 				/>
 			</div>
-			<div className={layout[desktop ? "rowa" : "col"]}>
+			<div className={layout[desktop ? "row" : "col"]}>
 				<AchievementCard
 					date="May 2017"
 					title="18th Annual Robofest"
@@ -204,15 +204,15 @@ const SocialBtn = ({ icon, href }: { icon: string, href: string }) => {
 }
 
 export default function Home() {
-	const mobile = useMediaQuery("(min-width: 500px)");
+	const desktop = useMediaQuery("(min-width: 500px)");
 	return (
 		<>
 			<main>
 				<About name={"TIMOTHY"} />
 				<Skills />
-				<Projects mobile={mobile} />
+				<Projects desktop={desktop} />
 				<Education />
-				<Achievements mobile={mobile} />
+				<Achievements desktop={desktop} />
 			</main>
 			<footer>
 				<div className={layout.row}>

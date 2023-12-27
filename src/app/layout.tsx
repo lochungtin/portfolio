@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import background from './background.png';
+import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Timothy Lo',
@@ -18,7 +19,7 @@ export default function RootLayout({
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
 			</head>
-			<body>{children}</body>
+			<body style={{ backgroundImage: `url(${background.src})` }}>{children}</body>
 		</html>
 	)
 }

@@ -20,6 +20,7 @@ export default function RootLayout({
 				<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
 			</head>
 			<body style={{ backgroundImage: `url(${background.src})` }}>{children}</body>
+			{/* <body>{children}</body> */}
 		</html>
 	)
 }

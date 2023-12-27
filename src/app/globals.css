@@ -31,9 +31,9 @@
 body {
 	align-items: center;
 	background-color: rgb(var(--t4_color));
-	background-color: rgb(var(--t4_color));
 	background-blend-mode: color-burn;
-	background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: rgb(var(--t0_color));
 	display: flex;
 	flex-direction: column;

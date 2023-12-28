@@ -80,7 +80,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					icon3="pytorch"
 					cTitle="Auto-Seg"
 					text="(auto-segmentation) of ultrasonic scans for ovarian masses is my main research focus for my Master's thesis. My diagnosis pipline managed to achieved an accuracy of 92%."
-					doc=""
+					doc="https://lochungtin.github.io/#/./study/mres"
 				/>
 				<ProjectCard
 					otitle="CoinControl"
@@ -113,7 +113,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					cTitle="RL Pacman"
 					text="is my undergraduate disseration. The topic is to use the Pacman environment to study the differences of classic reinforcement learning and genetic algorithm."
 					gh=""
-					doc=""
+					doc="https://lochungtin.github.io/#/./study/bsc"
 				/>
 			</div>
 		</section>

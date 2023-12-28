@@ -59,7 +59,7 @@ export const ProjectCard = ({
 export const EducationCard = ({
     name, loc, start, end, grade, isLeft
 }: {
-    name: string, loc: string, start: string, end: string, grade: string, isLeft: boolean
+    name: string, loc: string, start: string, end: string, grade?: string, isLeft: boolean
 }) => {
     let splt: string[] = name.split(" ");
     splt.reverse();
@@ -78,7 +78,7 @@ export const EducationCard = ({
                     </div>
                     <div className={education.details}>
                         <p>{start} - {end}</p>
-                        <p>{grade}</p>
+                        <p>{grade ? grade : ""}</p>
                     </div>
                 </div>
             </div>

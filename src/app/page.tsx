@@ -154,7 +154,6 @@ const Education = () => {
 				loc="HKCCCU Logos Academy"
 				start="2017"
 				end="2019"
-				grade="36 / 45"
 				isLeft={false}
 			/>
 		</section>

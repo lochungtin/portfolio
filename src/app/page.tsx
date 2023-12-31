@@ -91,7 +91,7 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					cTitle="CoinControl"
 					text="is a money management mobile app with an account system, cloud backup, analytics, and also a built-in calculator for easy calculations for recording cashflow"
 					gh="https://github.com/lochungtin/coincontrol"
-					doc=""
+					doc="https://lochungtin.github.io/CoinControl/"
 				/>
 			</div>
 			<div className={layout[desktop ? "row" : "col"]}>
@@ -103,8 +103,8 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					icon3="javascript"
 					cTitle="Project Expedite"
 					text="is my attempt to create solutions, algorithms, or solvers to classic puzzle games. A few principles are setup and all the algorithms abide by these principles."
-					gh=""
-					doc=""
+					gh="https://github.com/lochungtin/Expedite"
+					doc="https://lochungtin.github.io/Expedite/"
 				/>
 				<ProjectCard
 					otitle="RL Pacman"
@@ -112,7 +112,6 @@ const Projects = ({ desktop }: { desktop: boolean }) => {
 					icon1="python"
 					cTitle="RL Pacman"
 					text="is my undergraduate disseration. The topic is to use the Pacman environment to study the differences of classic reinforcement learning and genetic algorithm."
-					gh=""
 					doc="https://lochungtin.github.io/#/./study/bsc"
 				/>
 			</div>
